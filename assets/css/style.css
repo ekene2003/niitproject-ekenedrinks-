@@ -11,7 +11,7 @@
      padding: 1rem 2rem;
      display: flex; 
      align-items: center;
-     background: tomato;
+     background: #ff6700;
 justify-content: space-between;
 }
 .header-tittle{
@@ -45,6 +45,10 @@ font-weight: 800;
 .user-link svg:hover{
      color: gray;   
 }
+.home-section{
+     background: #ff6700;
+     padding-top: 4rem;
+}
 .row{
      display: flex;
      align-items: center;
@@ -53,11 +57,23 @@ font-weight: 800;
 
 }
 .home-head{
-
+font-family:  'Amatic SC', cursive;
+font-size: 8rem;
+font-weight:900;
+color: white;
 }
 .home-p{
-
+color: white;
+font-family: 'Roboto Flex', sans-serif;
+font-size: 1.5rem;
 }
 .right{
-
+position: relative;
+}
+.fruit{
+     width: 50%;
+     height: 15vw;
+     position: absolute;
+     bottom: 0;
+     right: -25%;
 }
