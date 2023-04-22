@@ -43,6 +43,21 @@ font-weight: 800;
      height: 1.5rem;
 }
 .user-link svg:hover{
-     color: gray;
+     color: gray;   
+}
+.row{
+     display: flex;
+     align-items: center;
+}
+.left{
+
+}
+.home-head{
+
+}
+.home-p{
+
+}
+.right{
 
 }
