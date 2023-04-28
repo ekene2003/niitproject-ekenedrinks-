@@ -240,6 +240,7 @@ font-weight: bolder;
 }
 .card-p{
      text-align: center !important;
+     color: grey;
 }
 .order-section{
      background: gray;
@@ -354,5 +355,5 @@ justify-content: center;
 .about-p{
         color: white;
      font-family: 'Play', sans-serif;
-font-size: 2rem;
+font-size: 1.5rem;
 }
