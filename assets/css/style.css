@@ -268,13 +268,13 @@ font-family: 'Roboto Flex', sans-serif;
 }
 .footer{
      position: relative;
-     padding: 3rem 0;
+     padding: 2rem 0;
 }
 .footer-head{
       font-family: 'Roboto Flex', sans-serif;
 color: black;
-font-size: 4rem;
-margin-top: 4rem;
+font-size: 3rem;
+margin-top: 2rem;
 }
 .footer-content{
      display: flex;
@@ -356,4 +356,11 @@ justify-content: center;
         color: white;
      font-family: 'Play', sans-serif;
 font-size: 1.5rem;
+}
+.login-header{
+     padding: 1rem 2rem;
+     display: flex; 
+     align-items: center;
+     background: gray;
+justify-content: space-between;
 }
