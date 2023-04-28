@@ -244,7 +244,7 @@ font-weight: bolder;
 }
 .order-section{
      background: gray;
-     padding: 3rem 0;
+     padding: 1rem 0;
 }
 .form-img{
      width: 100%;
@@ -256,8 +256,8 @@ font-weight: bolder;
       font-weight: 900;
 }
 .order-submitBtn{
-padding: 1rem;
-width: 100%;
+padding: .5rem;
+width: 70%;
 border-radius: 1rem;
 border: 1px solid grey;
 font-size: 1.5rem;
@@ -363,4 +363,12 @@ font-size: 1.5rem;
      align-items: center;
      background: gray;
 justify-content: space-between;
+}
+.login-form-img{
+     width: 100%;
+     height: 64vw;
+     object-fit: cover;
+}
+.login-small{
+     color: #fcfcf6;
 }
