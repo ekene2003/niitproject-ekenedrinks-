@@ -31,7 +31,7 @@
           <header class="login-header">
                <h1 class="header-tittle">Ekene Drinks</h1>
                <ul class="links">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="./index.html">Home</a></li>
                     <li><a href="#about">About us</a></li>
                     <li><a href="#category">Categories</a></li>
                     <li><a href="#drinks">Drinks</a></li>
@@ -53,7 +53,7 @@
                               <img src="./assets/images/PEPSI BLACK CGI.png" alt="" class="login-form-img">
                          </div>
                          <div class="col-md-6">
-                              <form action="order.php" method="post" class="order-form">
+                              <form action="order.php" method="post" class="signup-form ">
                                    <div class="mb-3">
                                         <label for="firstname" class="form-label">First name</label>
                                         <input type="email" class="form-control" id="firstname"
@@ -91,8 +91,24 @@
                                              placeholder="name@example.com">
                                    </div>
                                    <button type="submit" class="order-submitBtn">Sign Up</button>
+                              <div class="login-small mt-3 text-center">Have an account? Login</div>
+
                               </form>
-                              <div class="login-small mt-3 text-center">You have an account? Login</div>
+                              <form action="order.php" method="post" class="login-form">
+                                   <div class="mb-3">
+                                        <label for="username" class="form-label">Username</label>
+                                        <input type="email" class="form-control" id="username"
+                                             placeholder="your username">
+                                   </div>
+                                   <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="email" class="form-control" id="password"
+                                             placeholder="name@example.com">
+                                   </div>
+                                   <button type="submit" class="order-submitBtn">Login</button>
+                              <div class="login-small mt-3 text-center">Don't have an account? Signup</div>
+
+                              </form>
                          </div>
                     </div>
                </div>

@@ -34,7 +34,7 @@ font-family: 'Roboto Flex', sans-serif;
 font-weight: 800;
 }
 .links li a:hover{
-     color: gray;
+ color: #2d2b2b;
 }
 .user-section{
      display: flex;
@@ -361,7 +361,7 @@ font-size: 1.5rem;
      padding: 1rem 2rem;
      display: flex; 
      align-items: center;
-     background: gray;
+     background: rgb(83, 82, 82);
 justify-content: space-between;
 }
 .login-form-img{
@@ -371,4 +371,13 @@ justify-content: space-between;
 }
 .login-small{
      color: #fcfcf6;
+     cursor: pointer;
+}
+.login-form{
+     font-size: 1.3rem;
+     font-family: 'Roboto Flex', sans-serif;
+}
+.signup-form{
+     font-size: 1.3rem;
+     font-family: 'Roboto Flex', sans-serif;
 }
