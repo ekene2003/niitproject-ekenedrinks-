@@ -91,7 +91,7 @@
                                              placeholder="name@example.com">
                                    </div>
                                    <button type="submit" class="order-submitBtn">Sign Up</button>
-                              <div class="login-small mt-3 text-center">Have an account? Login</div>
+                              <div class="signup-small mt-3 text-center">Have an account? Login</div>
 
                               </form>
                               <form action="order.php" method="post" class="login-form">
@@ -154,7 +154,25 @@
                </div>
                </div>
           </footer>
-          <script src="./assets/js/script.js"></script>
+          <script>
+                              function singleelem(elem) {
+                    return document.querySelector(elem);
+               };
+               function multielem(elem) {
+                    return document.querySelectorAll(elem);
+               };
+               let homeWrap = singleelem(".home");
+               let indexheader = singleelem(".index-header");
+               let formToggler = singleelem(".login-small");
+               let loginForm = singleelem(".login-form");
+               let signupForm = singleelem(".signup-form");
+                formToggler.onclick=()=>{
+                    loginForm.style.display="block";
+                    signupForm.style.display="none";
+                }
+               console.log(formToggler);
+
+          </script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
           <script src="./assets/js/all.min.js"></script>
      </body>

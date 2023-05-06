@@ -6,6 +6,8 @@ function multielem(elem) {
 };
 let homeWrap = singleelem(".home");
 let indexheader = singleelem(".index-header");
+let formToggler = singleelem(".login-small");
+console.log(formToggler);
 let bg = ["#ff6700", "#ff3016", "#6610f2"];
 i = 0
 setInterval(() => {

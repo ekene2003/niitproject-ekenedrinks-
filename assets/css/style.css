@@ -376,6 +376,7 @@ justify-content: space-between;
 .login-form{
      font-size: 1.3rem;
      font-family: 'Roboto Flex', sans-serif;
+     display: none;
 }
 .signup-form{
      font-size: 1.3rem;
