@@ -373,6 +373,10 @@ justify-content: space-between;
      color: #fcfcf6;
      cursor: pointer;
 }
+.signup-small{
+     color: #fcfcf6;
+     cursor: pointer;
+}
 .login-form{
      font-size: 1.3rem;
      font-family: 'Roboto Flex', sans-serif;
