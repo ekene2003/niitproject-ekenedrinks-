@@ -163,6 +163,7 @@
                let indexheader = singleelem(".index-header");
                let formTogglerLogin = singleelem(".login-small");
                let formTogglerSignup = singleelem(".signup-small");
+               let tittle = singleelem(".order-section-title");
                let loginForm = singleelem(".login-form");
                let loginFormImg = singleelem(".login-form-img");
                let signupForm = singleelem(".signup-form");
@@ -171,12 +172,18 @@
                     loginForm.style.display="block";
                     signupForm.style.display="none";
                     loginFormImg.style.height="30vw";
+                    tittle.innerHTML=`
+                    <h3 class="text-center mb-5 mt-5">Login</h3>
+                    `;
                 }
                 formTogglerLogin.onclick=()=>{
                     signupForm.style.transition="all 1s ease-in-out";
                     loginFormImg.style.height="64vw";
                     loginForm.style.display="none";
                     signupForm.style.display="block";
+                    tittle.innerHTML=`
+                    <h3 class="text-center mb-5 mt-5">Sign up</h3>
+                    `;
                 }
           </script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
