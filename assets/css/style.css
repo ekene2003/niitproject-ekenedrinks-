@@ -34,7 +34,7 @@ font-family: 'Roboto Flex', sans-serif;
 font-weight: 800;
 }
 .links li a:hover{
- color: #2d2b2b;
+ color:gray;
 }
 .user-section{
      display: flex;
