@@ -59,9 +59,9 @@ $create_vendors_table = "CREATE TABLE IF NOT EXISTS vendors (
 $db->query($create_vendors_table);
 
 
-$create_foods_table = "CREATE TABLE IF NOT EXISTS foods (
-    food_id INT(255) UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    foodname VARCHAR(50) NOT NULL,
+$create_drinks_table = "CREATE TABLE IF NOT EXISTS drinks (
+    drink_id INT(255) UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    drinkname VARCHAR(50) NOT NULL,
     price DECIMAL(7,2) NOT NULL,
     quantity VARCHAR(7) NOT NULL,
     description VARCHAR(250) NOT NULL,
@@ -72,7 +72,7 @@ $create_foods_table = "CREATE TABLE IF NOT EXISTS foods (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci, ENGINE=InnoDB";
-$db->query($create_foods_table);
+$db->query($create_drinks_table);
 
 $create_orders_table = "CREATE TABLE IF NOT EXISTS orders (
     order_id INT(255) UNSIGNED AUTO_INCREMENT,
@@ -88,7 +88,7 @@ $db->query($create_orders_table);
 $create_order_items_table = "CREATE TABLE IF NOT EXISTS order_items (
     order_item_id INT(255) UNSIGNED AUTO_INCREMENT,
     order_id INT(255) UNSIGNED NOT NULL,
-    food_id INT(255) UNSIGNED NOT NULL,
+    drink_id INT(255) UNSIGNED NOT NULL,
     price DECIMAL(7,2) NOT NULL,
     quantity VARCHAR(7) NOT NULL,
     status TINYINT(2) DEFAULT 1,
