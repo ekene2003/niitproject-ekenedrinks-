@@ -370,9 +370,12 @@ width: 100%;
 }
 .login-form-bg{
      width: 100%;
-     height: 100vh;
+     height: 150vh;
      object-fit: cover;
      
+}
+.form-tittle{
+     font-size: 2.5rem !important;
 }
 .login-small{
      color: #fcfcf6;
@@ -386,11 +389,16 @@ width: 100%;
      font-size: 1.3rem;
      font-family: 'Roboto Flex', sans-serif;
      display: none;
-
 }
 .signup-form{
      font-size: 1.3rem;
      font-family: 'Roboto Flex', sans-serif;
-     background: gray;
+     background: white;
      padding: 1rem;
+     position: absolute;
+     top: 20%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 80%;
 }

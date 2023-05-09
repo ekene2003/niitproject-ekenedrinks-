@@ -46,44 +46,43 @@
           </header>
           <div class="form-section" id="order">
                <div class="container">
-                    <div class="row">
-                         <div class="col-md-6">
-                              <form action="order.php" method="post" class="signup-form">
+                    <div>
+                              <form action="order.php" method="post" class="signup-form row">
                                    <div class="form-section-title">
-                                        <h3 class="text-center mb-5 mt-5">Sign up</h3>
+                                        <h3 class="text-center form-tittle">Sign up</h3>
                                    </div>
-                                   <div class="mb-3">
+                                   <div class="mb-3 col-md-6">
                                         <label for="firstname" class="form-label">First name</label>
                                         <input type="email" class="form-control" id="firstname" name="firstname"
                                              placeholder="your username">
                                    </div>
-                                   <div class="mb-3">
+                                   <div class="mb-3 col-md-6">
                                         <label for="lastname" class="form-label">Last name</label>
                                         <input type="email" class="form-control" name="lastname" id="lastname"
                                              placeholder="your username">
                                    </div>
-                                   <div class="mb-3">
+                                   <div class="mb-3 col-md-6">
                                         <label for="username" class="form-label">Username</label>
                                         <input type="email" class="form-control" name="username" id="username"
                                              placeholder="your username">
                                    </div>
-                                   <div class="mb-3">
+                                   <div class="mb-3 col-md-6">
                                         <label for="email" class="form-label">Email address</label>
                                         <input type="email" class="form-control" name="email" id="email"
                                              placeholder="name@example.com">
                                    </div>
-                                   <div class="mb-3">
+                                   <div class="mb-3 col-md-6">
                                         <label for="password" class="form-label">Password</label>
                                         <input type="email" class="form-control" id="password"
                                              placeholder="name@example.com" name="password">
-                                   </div>
-                                   <div class="mb-3">
+                                   </div> 
+                                   <div class="mb-3 col-md-6">
                                         <label for="c-pass" class="form-label">Confirm
                                              Password</label>
                                         <input type="email" class="form-control" id="c-pass"
                                              placeholder="name@example.com" name="cpassword">
                                    </div>
-                                   <div class="mb-3">
+                                   <div class="mb-3 col-md-12">
                                         <label for="profile" class="form-label">Profile picture </label>
                                         <input type="file" class="form-control" id="profile"
                                              placeholder="name@example.com" name="image">
@@ -161,22 +160,19 @@
                let indexheader = singleelem(".index-header");
                let formTogglerLogin = singleelem(".login-small");
                let formTogglerSignup = singleelem(".signup-small");
-               let tittle = singleelem(".order-section-title");
+               let tittle = singleelem(".form-section-title");
                let loginForm = singleelem(".login-form");
-               let loginFormImg = singleelem(".login-form-img");
                let signupForm = singleelem(".signup-form");
                 formTogglerSignup.onclick=()=>{
                     loginForm.style.transition="all 1s ease-in-out";
                     loginForm.style.display="block";
                     signupForm.style.display="none";
-                    loginFormImg.style.height="30vw";
                     tittle.innerHTML=`
                     <h3 class="text-center mb-5 mt-5">Login</h3>
                     `;
                 }
                 formTogglerLogin.onclick=()=>{
                     signupForm.style.transition="all 1s ease-in-out";
-                    loginFormImg.style.height="64vw";
                     loginForm.style.display="none";
                     signupForm.style.display="block";
                     tittle.innerHTML=`
