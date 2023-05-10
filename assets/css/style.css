@@ -257,10 +257,12 @@ font-weight: bolder;
 }
 .order-submitBtn{
 padding: .5rem;
-width: 70%;
+width: 40% !important;
 border-radius: 1rem;
 border: 1px solid grey;
 font-size: 1.5rem;
+display: flex;
+justify-content: center;
 }
 .order-form{
      font-size: 1.5rem;
@@ -269,6 +271,7 @@ font-family: 'Roboto Flex', sans-serif;
 .footer{
      position: relative;
      padding: 2rem 0;
+     background: white;
 }
 .footer-head{
       font-family: 'Roboto Flex', sans-serif;
@@ -372,23 +375,34 @@ width: 100%;
      width: 100%;
      height: 150vh;
      object-fit: cover;
-     
+     opacity: 0.6;
+     z-index: 9;
 }
 .form-tittle{
-     font-size: 2.5rem !important;
+     font-size: 3rem !important;
 }
 .login-small{
-     color: #fcfcf6;
+     color: gray;
      cursor: pointer;
 }
 .signup-small{
-     color: #fcfcf6;
+     color: gray;
      cursor: pointer;
 }
 .login-form{
      font-size: 1.3rem;
      font-family: 'Roboto Flex', sans-serif;
+     background: white;
+     padding: 1rem;
+     position: absolute;
+     top: 20%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
      display: none;
+     width: 50%;
+     transform: translateX(25%);
+     
 }
 .signup-form{
      font-size: 1.3rem;
@@ -401,4 +415,11 @@ width: 100%;
      justify-content: center;
      align-items: center;
      width: 80%;
+}
+input{
+     border: 1px solid grey !important;
+}
+.form-body{
+     background: #000 !important;
+     z-index: 999;
 }
