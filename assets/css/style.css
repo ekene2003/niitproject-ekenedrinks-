@@ -41,9 +41,15 @@ font-weight: 800;
      justify-content: space-evenly;
      gap: 2rem;
 }
+
 .user-link svg{
      color: white;
      height: 1rem;
+     cursor: pointer;
+
+}
+.cart-a{
+     cursor: pointer !important;
 }
 .user-link svg:hover{
      color: gray;   
