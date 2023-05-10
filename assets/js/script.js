@@ -7,7 +7,29 @@ function multielem(elem) {
 let homeWrap = singleelem(".home");
 let indexheader = singleelem(".index-header");
 let formToggler = singleelem(".login-small");
-console.log(formToggler);
+let drinksBtn = multielem(".drink-btn");
+let drinks = multielem(".drinks");
+drinksBtn.forEach(btn => {
+     btn.onclick=()=>{
+     let category = btn.dataset.category;
+        console.log(category);
+        drinks.forEach(drink => {
+          let drinkType = drink.dataset.type;
+          if (category =="all") {
+               drink.style.display = "block";
+          }
+          else{
+               if(category == drinkType){
+                    drink.style.display = "block";
+               }
+               else{
+                    drink.style.display = "none"
+               }
+          }
+     });
+     }
+   
+});
 let bg = ["#ff6700", "#ff3016", "#6610f2"];
 i = 0
 setInterval(() => {
