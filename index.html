@@ -40,7 +40,25 @@
                <div class="user-section">
                     <a href="./login.html" class="user-link"><i class="fa fa-user"></i></a>
                     <a href="" class="user-link"><i class="fa fa-search"></i></a>
-                    <a href="" class="user-link"><i class="fa fa-shopping-bag"></i></a>
+                    <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                         <div class="position-relative">    
+                           <a href="" class="user-link"><i class="fa fa-cart-shopping"></i></a>
+                              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                                <span class="visually-hidden">unread messages</span>
+                              </span>
+                         </div>
+                    </div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body"> 
+    ...
+  </div>
+</div>
                </div>
           </header>
           <div class="home" id="home">
