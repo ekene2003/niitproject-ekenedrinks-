@@ -366,6 +366,9 @@ justify-content: center;
      font-family: 'Play', sans-serif;
 font-size: 1.5rem;
 }
+.mini-cart{
+     display: flex !important;
+}
 .login-header{
      padding: 1rem 2rem;
      display: flex; 
