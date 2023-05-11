@@ -370,30 +370,36 @@ font-size: 1.5rem;
      display: flex !important;
      gap: 1rem;
      padding: 1rem;
-     background: #f8f8f3;;
+     position: relative;
+     /* background: #f8f8f3; */
 }
 .minicart-btn{
 display: flex;
-gap: 1rem;
+gap: .5rem;
 justify-content: center;
-border: 1px solid black;
+align-items: center;
+border: 1px solid gray;
 height: 2.5rem;
+cursor: pointer;
+/* padding: 1rem; */
 }
 .increase{
-/* border-right: 1px solid #000; */
-padding-top: .3rem;
+
+/* padding-top: .3rem; */
 }
 .amount{
-font-size: 1.2rem;
-padding-top: .3rem;
+font-size: 1rem;
+/* padding-top: .3rem; */
 }
 .decrease{
-     /* border-left: 1px solid #000; */
-     padding-top: .3rem;
+
 
 }
 .remove-sec{
      margin-left: 4rem;
+     position: absolute;
+     bottom: 0;
+     right: 0;
 }
 .login-header{
      padding: 1rem 2rem;
