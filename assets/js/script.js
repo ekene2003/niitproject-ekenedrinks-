@@ -7,8 +7,33 @@ function multielem(elem) {
 let homeWrap = singleelem(".home");
 let indexheader = singleelem(".index-header");
 let formToggler = singleelem(".login-small");
+let cartamount = singleelem(".badge-no");
 let drinksBtn = multielem(".drink-btn");
 let drinks = multielem(".drinks");
+let cartBtn = multielem(".cart");
+b=0;
+cartBtn.forEach(btn => {
+     btn.onclick=()=>{
+          b++;
+       cartamount.innerHTML=`
+       <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
+       <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+         ${b}
+         <span class="visually-hidden">unread messages</span>
+       </span>
+       `;
+       if (b<=0) {
+          cartamount.innerHTML=`
+          <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            ${b==0}
+            <span class="visually-hidden">unread messages</span>
+          </span>
+          `;
+       }
+
+     }
+});
 drinksBtn.forEach(btn => {
      btn.onclick=()=>{
      let category = btn.dataset.category;
