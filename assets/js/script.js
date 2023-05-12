@@ -11,7 +11,7 @@ let cartamount = singleelem(".badge-no");
 let drinksBtn = multielem(".drink-btn");
 let drinks = multielem(".drinks");
 let increaseBtn = multielem(".increase");
-let decrease = multielem(".decrease");
+let decreaseBtn = multielem(".decrease");
 let amountPage = multielem(".amount");
 let cartBtn = multielem(".cart");
 let minicart = multielem(".mini-cart");
@@ -19,21 +19,27 @@ let minicart = multielem(".mini-cart");
 c=0;
 increaseBtn.forEach((btn) => {
   btn.onclick = () => {
-    amountPage.forEach(am => {
-      am.value = "1";
-      let amountV =parseInt(am.value);
-     amountV = isNaN(amountV)? 1:amountV;
-     amountV +=1;
-      console.log(amountV);
-    });
-  // let newValue = amount.value;
-  // console.log(newValue);
-  //  c += 1;
-  //  let current = btn.closest(".mini-sec").querySelector(".amount");
-  //  if (current == c ) {
-  //       current.innerText = `${c}`;
-  //       console.log(current.innerText);
-  //  }
+   c += 1;
+   let current = btn.closest(".mini-sec").querySelector(".amount");
+   current.innerText = `${c}`;
+   console.log(current.innerText);
+  };
+});
+decreaseBtn.forEach((btn) => {
+  btn.onclick = () => {
+   c -= 1;
+   let current = btn.closest(".mini-sec").querySelector(".amount");
+   let currentCart = btn.closest(".mini-cart");
+   if (current.innerText <= 1) {
+    current.innerText = 0;
+    c = 0;
+    setTimeout(() => {
+   currentCart.style.display="none";
+    }, 1000);
+   };
+   current.innerText = `${c}`;
+   console.log(current.innerText);
+
   };
 });
 b = 0;

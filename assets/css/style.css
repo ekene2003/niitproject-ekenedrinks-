@@ -366,12 +366,24 @@ justify-content: center;
      font-family: 'Play', sans-serif;
 font-size: 1.5rem;
 }
+.mini-cart-wrap{
+     width: 100%;
+}
 .mini-cart{
-     display: flex !important;
-     gap: 1rem;
      padding: 1rem;
      position: relative;
+     width: 100%;
      /* background: #f8f8f3; */
+}
+.cart-wrap{
+     display: flex !important;
+     gap: 2rem;
+
+}
+.cart-img{
+     width: 110%;
+     height: 20vw;
+     object-fit: cover;
 }
 .minicart-btn{
 display: flex;
@@ -396,10 +408,9 @@ font-size: 1rem;
 
 }
 .remove-sec{
-     margin-left: 4rem;
      position: absolute;
      bottom: 0;
-     right: 0;
+     right: -10%;
 }
 .login-header{
      padding: 1rem 2rem;
