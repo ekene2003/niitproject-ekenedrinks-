@@ -15,13 +15,17 @@ let decrease = multielem(".decrease");
 let amountPage = multielem(".amount");
 let cartBtn = multielem(".cart");
 let minicart = multielem(".mini-cart");
-amountPage.forEach(amount => {
-  amount.value = `5`;
-  console.log(amount);
-});
+
 c=0;
 increaseBtn.forEach((btn) => {
   btn.onclick = () => {
+    amountPage.forEach(am => {
+      am.value = "1";
+      let amountV =parseInt(am.value);
+     amountV = isNaN(amountV)? 1:amountV;
+     amountV +=1;
+      console.log(amountV);
+    });
   // let newValue = amount.value;
   // console.log(newValue);
   //  c += 1;
