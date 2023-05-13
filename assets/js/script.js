@@ -26,7 +26,7 @@ cartBtn.forEach((btn) => {
        </span>
        `;
     cartWrap.innerHTML += `
-                                <div class="mini-cart">
+                                <div class="mini-cart" id="cart${b}">
                                    <div class="cart-wrap">
                                         <div class="col-md-4">
                                              <img src="./assets/images/Coca Cola.jpeg" alt="" class="cart-img">
@@ -49,42 +49,31 @@ cartBtn.forEach((btn) => {
                                    </div>
                               </div>            
     `;
-    let increaseBtn = multielem(".increase");
-    let decreaseBtn = multielem(".decrease");
-    let amountPage = multielem(".amount");
+    console.log(cartWrap);
     let minicart = multielem(".mini-cart");
-    increaseBtn.forEach((btn) => {
-      btn.onclick = () => {
-        quantity ++;
-        let current = btn.closest(".mini-sec").querySelector(".amount");
-        current.innerText = `${quantity}`;
-        console.log(current.innerText);
+    cart ={};
+    minicart.forEach(cart => {
+      let cartId = cart.getAttribute("id");
+       cart[cartId]={quantity:0};
+       let increaseBtn = cart.querySelector(".increase");
+    let decreaseBtn = cart.querySelector(".decrease");
+    let amountPage = cart.querySelector(".amount");
+    increaseBtn.addEventListener("click", (() => {
+      const cartObject = cart[cartId];
+      return () => {
+        cartObject.quantity++;
+        amountPage.textContent = cartObject.quantity;
       };
-    });
-    decreaseBtn.forEach((btn) => {
-      btn.onclick = () => {
-        let current = btn.closest(".mini-sec").querySelector(".amount");
-        let currentCart = btn.closest(".mini-cart");
-        if (quantity > 0) {
-        quantity -= 1;
+    })());
+    decreaseBtn.addEventListener("click", (() => {
+      const cartObject = cart[cartId];
+      return () => {
+        if (cartObject.quantity > 0) {
+          cartObject.quantity--;
+          amountPage.textContent = cartObject.quantity;
         }
-        else{
-          current.innerText = 0;
-          quantity = 0;
-          setTimeout(() => {
-            currentCart.style.display = "none";
-          },1000);
-          cartamount.innerHTML = `
-        <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          ${(b -= 1)}
-          <span class="visually-hidden">unread messages</span>
-        </span>
-        `;
-        }
-        current.innerText = `${quantity}`;
-        console.log(current.innerText);
       };
+    })());
     });
   };
 });
