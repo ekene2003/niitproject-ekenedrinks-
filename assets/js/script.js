@@ -13,7 +13,7 @@ let drinks = multielem(".drinks");
 let cartBtn = multielem(".cart");
 
 let cartWrap = singleelem(".mini-cart-wrap");
-c=0;
+let quantity = 1;
 b = 0;
 cartBtn.forEach((btn) => {
   btn.onclick = () => {
@@ -25,7 +25,7 @@ cartBtn.forEach((btn) => {
          <span class="visually-hidden">unread messages</span>
        </span>
        `;
-    cartWrap.innerHTML +=`
+    cartWrap.innerHTML += `
                                 <div class="mini-cart">
                                    <div class="cart-wrap">
                                         <div class="col-md-4">
@@ -50,38 +50,40 @@ cartBtn.forEach((btn) => {
                               </div>            
     `;
     let increaseBtn = multielem(".increase");
-let decreaseBtn = multielem(".decrease");
-let amountPage = multielem(".amount");
-let minicart = multielem(".mini-cart");
+    let decreaseBtn = multielem(".decrease");
+    let amountPage = multielem(".amount");
+    let minicart = multielem(".mini-cart");
     increaseBtn.forEach((btn) => {
       btn.onclick = () => {
-       c += 1;
-       let current = btn.closest(".mini-sec").querySelector(".amount");
-       current.innerText = `${c}`;
-       console.log(current.innerText);
+        quantity ++;
+        let current = btn.closest(".mini-sec").querySelector(".amount");
+        current.innerText = `${quantity}`;
+        console.log(current.innerText);
       };
     });
     decreaseBtn.forEach((btn) => {
       btn.onclick = () => {
-       c -= 1;
-       let current = btn.closest(".mini-sec").querySelector(".amount");
-       let currentCart = btn.closest(".mini-cart");
-       if (current.innerText <= 1) {
-        current.innerText = 0;
-        c = 0;
-        setTimeout(() => {
-       currentCart.style.display="none";
-        }, 1000);
-        cartamount.innerHTML = `
+        let current = btn.closest(".mini-sec").querySelector(".amount");
+        let currentCart = btn.closest(".mini-cart");
+        if (quantity > 0) {
+        quantity -= 1;
+        }
+        else{
+          current.innerText = 0;
+          quantity = 0;
+          setTimeout(() => {
+            currentCart.style.display = "none";
+          },1000);
+          cartamount.innerHTML = `
         <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          ${b-=1}
+          ${(b -= 1)}
           <span class="visually-hidden">unread messages</span>
         </span>
         `;
-       };
-       current.innerText = `${c}`;
-       console.log(current.innerText);
+        }
+        current.innerText = `${quantity}`;
+        console.log(current.innerText);
       };
     });
   };

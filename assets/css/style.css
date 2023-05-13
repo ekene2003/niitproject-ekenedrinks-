@@ -215,6 +215,10 @@ height: 100vh !important;
     border: 2px solid black;
     font-size: 1.3rem;
 }
+.cart:hover{
+     background: gray;
+     color: white;
+}
 .card-title{
 font-family: 'Roboto Flex', sans-serif;
      font-size: 2rem;
