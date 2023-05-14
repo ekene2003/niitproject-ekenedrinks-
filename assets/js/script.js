@@ -50,39 +50,56 @@ cartBtn.forEach((btn) => {
                               </div>            
     `;
     let minicart = multielem(".mini-cart");
-    cart ={};
-    minicart.forEach(cart => {
+    cart = {};
+    minicart.forEach((cart) => {
       let cartId = cart.getAttribute("id");
-       cart[cartId]={quantity:0};
-       let increaseBtn = cart.querySelector(".increase");
-    let decreaseBtn = cart.querySelector(".decrease");
-    let amountPage = cart.querySelector(".amount");
-    increaseBtn.addEventListener("click", (() => {
-      const cartObject = cart[cartId];
-      return () => {
-        cartObject.quantity++;
-        amountPage.textContent = cartObject.quantity;
-      };
-    })());
-    decreaseBtn.addEventListener("click", (() => {
-      const cartObject = cart[cartId];
-      return () => {
-        if (cartObject.quantity > 0) {
-          cartObject.quantity--;
-          amountPage.textContent = cartObject.quantity;
-        }
-        if (cartObject.quantity <= 1) {
-          cartamount.innerHTML = `
+      cart[cartId] = { quantity: 1 };
+      let increaseBtn = cart.querySelector(".increase");
+      let decreaseBtn = cart.querySelector(".decrease");
+      let amountPage = cart.querySelector(".amount");
+      let removeBtn = cart.querySelector(".removeBtn");
+      increaseBtn.addEventListener(
+        "click",
+        (() => {
+          const cartObject = cart[cartId];
+          return () => {
+            cartObject.quantity++;
+            amountPage.textContent = cartObject.quantity;
+          };
+        })()
+      );
+      decreaseBtn.addEventListener(
+        "click",
+        (() => {
+          const cartObject = cart[cartId];
+          return () => {
+            if (cartObject.quantity > 0) {
+              cartObject.quantity--;
+              amountPage.textContent = cartObject.quantity;
+            }
+            if (cartObject.quantity <= 1) {
+              cartamount.innerHTML = `
           <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            ${b-=1}
+            ${(b -= 1)}
             <span class="visually-hidden">unread messages</span>
           </span>
           `;
-          cart.style.display="none";
-        }
-      };
-    })());
+              cart.style.display = "none";
+            }
+          };
+        })()
+      );
+      removeBtn.onclick=()=>{
+        cart.style.display = "none";
+        cartamount.innerHTML = `
+        <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          ${(b -= 1)}
+          <span class="visually-hidden">unread messages</span>
+        </span>
+        `;
+      }
     });
   };
 });
