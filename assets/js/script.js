@@ -79,6 +79,7 @@ cartBtn.forEach((btn) => {
             <span class="visually-hidden">unread messages</span>
           </span>
           `;
+          cart.style.display="none";
         }
       };
     })());
