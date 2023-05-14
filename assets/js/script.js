@@ -49,7 +49,6 @@ cartBtn.forEach((btn) => {
                                    </div>
                               </div>            
     `;
-    console.log(cartWrap);
     let minicart = multielem(".mini-cart");
     cart ={};
     minicart.forEach(cart => {
@@ -71,6 +70,15 @@ cartBtn.forEach((btn) => {
         if (cartObject.quantity > 0) {
           cartObject.quantity--;
           amountPage.textContent = cartObject.quantity;
+        }
+        if (cartObject.quantity <= 1) {
+          cartamount.innerHTML = `
+          <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            ${b-=1}
+            <span class="visually-hidden">unread messages</span>
+          </span>
+          `;
         }
       };
     })());
