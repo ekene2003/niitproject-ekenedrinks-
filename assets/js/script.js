@@ -11,16 +11,22 @@ let cartamount = singleelem(".badge-no");
 let drinksBtn = multielem(".drink-btn");
 let drinks = multielem(".drinks");
 let cartBtn = multielem(".cart");
-let total = singleelem(".total")
 let cartWrap = singleelem(".mini-cart-wrap");
 let prices = multielem(".price")
 let quantity = 1;
 b = 0;
-let priceArray =[];
+let prizearray = [];
+let total = singleelem(".total");
   cartBtn.forEach((btn) => {
     btn.onclick = () => {
       let currentPriceWrap = btn.closest(".drinks").querySelector(".price");
         let currentPrice =currentPriceWrap.innerText;
+        let newP = parseInt(currentPrice);
+         prizearray.push(newP);
+         let sumTotal = prizearray.reduce((a,b)=>
+          a+b
+         ,0);
+              total.innerHTML = `<p class="price">Total :<i class="fa fa-naira-sign"></i>${sumTotal}</p>`;       
        b++;
       cartamount.innerHTML = `
          <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
@@ -38,7 +44,7 @@ let priceArray =[];
                                           <div class="col-md-4 mini-sec">
                                                <h3 class="drink-name">Oceaneyes 4</h3>
                                                <p class="drink-cat">Beer</p>
-                                               <p class="drink-price">${currentPrice}</p>
+                                               <p class="drink-price"><i class="fa fa-naira-sign"></i>${currentPrice}</p>
                                                <div class="minicart-btn">
                                                     <div class="increase"><i class="fa fa-plus"></i></div>
                                                     <div class="vr"></div>
@@ -54,35 +60,35 @@ let priceArray =[];
                                 </div>            
       `;
       let minicart = multielem(".mini-cart");
-      cart = {};
+      carts = {};
       minicart.forEach((cart) => {
         let cartId = cart.getAttribute("id");
-        cart[cartId] = { quantity: 1 };
+        let price = parseFloat(cart.querySelector(".drink-price").textContent.slice(1));
+        carts[cartId] = { quantity: 1,price };
         let increaseBtn = cart.querySelector(".increase");
         let decreaseBtn = cart.querySelector(".decrease");
         let amountPage = cart.querySelector(".amount");
         let removeBtn = cart.querySelector(".removeBtn");
-        let drinkPrice = cart.querySelector(".removeBtn");
         increaseBtn.addEventListener(
           "click",
           (() => {
-            const cartObject = cart[cartId];
+            const cartObject = carts[cartId];
             return () => {
               cartObject.quantity++;
               amountPage.textContent = cartObject.quantity;
-              totalPrice = realcurrentPrice *2;
-              console.log(object);
+              updateTotalPrice();
             };
           })()
         );
         decreaseBtn.addEventListener(
           "click",
           (() => {
-            const cartObject = cart[cartId];
+            const cartObject = carts[cartId];
             return () => {
               if (cartObject.quantity > 0) {
                 cartObject.quantity--;
                 amountPage.textContent = cartObject.quantity;
+                updateTotalPrice();
               }
               if (cartObject.quantity < 1) {
                 cartamount.innerHTML = `
@@ -97,17 +103,32 @@ let priceArray =[];
             };
           })()
         );
-        removeBtn.onclick = () => {
-          cart.style.display = "none";
-          cartamount.innerHTML = `
-          <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            ${(b -= 1)}
-            <span class="visually-hidden">unread messages</span>
-          </span>
-          `;
-        };
-   
+
+        removeBtn.addEventListener("click", (() => {
+          const cartObject = carts[cartId];
+          return () => {
+            if (cartObject.quantity > 0) {
+              cartObject.quantity = 0;
+              amountPage.textContent = cartObject.quantity;
+              updateTotalPrice();
+              cart.style.display = "none";
+              cartamount.innerHTML = `
+              <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                ${(b -= 1)}
+                <span class="visually-hidden">unread messages</span>
+              </span>
+              `;
+            }
+          };
+        })());
+        function updateTotalPrice() {
+          let totalPrice = 0;
+          Object.values(carts).forEach((cart) => {
+            totalPrice += cart.quantity * cart.price;
+          });
+          total.innerHTML = `<p class="price">Total :<i class="fa fa-naira-sign"></i> ${+ totalPrice.toFixed(2)}</p>`;
+        }
       });
     };
   });
