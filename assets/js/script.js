@@ -11,98 +11,104 @@ let cartamount = singleelem(".badge-no");
 let drinksBtn = multielem(".drink-btn");
 let drinks = multielem(".drinks");
 let cartBtn = multielem(".cart");
-
+let total = singleelem(".total")
 let cartWrap = singleelem(".mini-cart-wrap");
+let prices = multielem(".price")
 let quantity = 1;
 b = 0;
-cartBtn.forEach((btn) => {
-  btn.onclick = () => {
-    b++;
-    cartamount.innerHTML = `
-       <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
-       <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-         ${b}
-         <span class="visually-hidden">unread messages</span>
-       </span>
-       `;
-    cartWrap.innerHTML += `
-                                <div class="mini-cart" id="cart${b}">
-                                   <div class="cart-wrap">
-                                        <div class="col-md-4">
-                                             <img src="./assets/images/Coca Cola.jpeg" alt="" class="cart-img">
-                                        </div>
-                                        <div class="col-md-4 mini-sec">
-                                             <h3 class="minicart-head">Oceaneyes 4</h3>
-                                             <p class="minicart-p">Beer</p>
-                                             <p class="mincart-p">$40</p>
-                                             <div class="minicart-btn">
-                                                  <div class="increase"><i class="fa fa-plus"></i></div>
-                                                  <div class="vr"></div>
-                                                  <div class="amount"> 1</div>
-                                                  <div class="vr"></div>
-                                                  <div class="decrease"><i class="fa fa-minus"></i></div>
-                                             </div>
-                                        </div>
-                                        <div class="col-md-4 remove-sec">
-                                             <div class="removeBtn"><p>Remove</p></div>
-                                        </div>
-                                   </div>
-                              </div>            
-    `;
-    let minicart = multielem(".mini-cart");
-    cart = {};
-    minicart.forEach((cart) => {
-      let cartId = cart.getAttribute("id");
-      cart[cartId] = { quantity: 1 };
-      let increaseBtn = cart.querySelector(".increase");
-      let decreaseBtn = cart.querySelector(".decrease");
-      let amountPage = cart.querySelector(".amount");
-      let removeBtn = cart.querySelector(".removeBtn");
-      increaseBtn.addEventListener(
-        "click",
-        (() => {
-          const cartObject = cart[cartId];
-          return () => {
-            cartObject.quantity++;
-            amountPage.textContent = cartObject.quantity;
-          };
-        })()
-      );
-      decreaseBtn.addEventListener(
-        "click",
-        (() => {
-          const cartObject = cart[cartId];
-          return () => {
-            if (cartObject.quantity > 0) {
-              cartObject.quantity--;
+prices.forEach(price => {
+  let newPrice = price.innerText;
+  console.log(newPrice);
+  cartBtn.forEach((btn) => {
+    btn.onclick = () => {
+      b++;
+      cartamount.innerHTML = `
+         <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
+         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+           ${b}
+           <span class="visually-hidden">unread messages</span>
+         </span>
+         `;
+      cartWrap.innerHTML += `
+                                  <div class="mini-cart" id="cart${b}">
+                                     <div class="cart-wrap">
+                                          <div class="col-md-4">
+                                               <img src="./assets/images/Coca Cola.jpeg" alt="" class="cart-img">
+                                          </div>
+                                          <div class="col-md-4 mini-sec">
+                                               <h3 class="drink-name">Oceaneyes 4</h3>
+                                               <p class="drink-cat">Beer</p>
+                                               <p class="drink-price">${newPrice}</p>
+                                               <div class="minicart-btn">
+                                                    <div class="increase"><i class="fa fa-plus"></i></div>
+                                                    <div class="vr"></div>
+                                                    <div class="amount"> 1</div>
+                                                    <div class="vr"></div>
+                                                    <div class="decrease"><i class="fa fa-minus"></i></div>
+                                               </div>
+                                          </div>
+                                          <div class="col-md-4 remove-sec">
+                                               <div class="removeBtn"><p>Remove</p></div>
+                                          </div>
+                                     </div>
+                                </div>            
+      `;
+      let minicart = multielem(".mini-cart");
+      cart = {};
+      minicart.forEach((cart) => {
+        let cartId = cart.getAttribute("id");
+        cart[cartId] = { quantity: 1 };
+        let increaseBtn = cart.querySelector(".increase");
+        let decreaseBtn = cart.querySelector(".decrease");
+        let amountPage = cart.querySelector(".amount");
+        let removeBtn = cart.querySelector(".removeBtn");
+        increaseBtn.addEventListener(
+          "click",
+          (() => {
+            const cartObject = cart[cartId];
+            return () => {
+              cartObject.quantity++;
               amountPage.textContent = cartObject.quantity;
-            }
-            if (cartObject.quantity < 1) {
-              cartamount.innerHTML = `
-                  <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    ${(b -= 1)}
-                    <span class="visually-hidden">unread messages</span>
-                  </span>
-                  `;
-              cart.style.display = "none";
-            }
-          };
-        })()
-      );
-      removeBtn.onclick = () => {
-        cart.style.display = "none";
-        cartamount.innerHTML = `
-        <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          ${(b -= 1)}
-          <span class="visually-hidden">unread messages</span>
-        </span>
-        `;
-      };
-    });
-  };
+            };
+          })()
+        );
+        decreaseBtn.addEventListener(
+          "click",
+          (() => {
+            const cartObject = cart[cartId];
+            return () => {
+              if (cartObject.quantity > 0) {
+                cartObject.quantity--;
+                amountPage.textContent = cartObject.quantity;
+              }
+              if (cartObject.quantity < 1) {
+                cartamount.innerHTML = `
+                    <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      ${(b -= 1)}
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                    `;
+                cart.style.display = "none";
+              }
+            };
+          })()
+        );
+        removeBtn.onclick = () => {
+          cart.style.display = "none";
+          cartamount.innerHTML = `
+          <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            ${(b -= 1)}
+            <span class="visually-hidden">unread messages</span>
+          </span>
+          `;
+        };
+      });
+    };
+  });
 });
+
 drinksBtn.forEach((btn) => {
   btn.onclick = () => {
     let category = btn.dataset.category;
