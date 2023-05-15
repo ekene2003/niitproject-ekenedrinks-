@@ -16,12 +16,12 @@ let cartWrap = singleelem(".mini-cart-wrap");
 let prices = multielem(".price")
 let quantity = 1;
 b = 0;
-prices.forEach(price => {
-  let newPrice = price.innerText;
-  console.log(newPrice);
+let priceArray =[];
   cartBtn.forEach((btn) => {
     btn.onclick = () => {
-      b++;
+      let currentPriceWrap = btn.closest(".drinks").querySelector(".price");
+        let currentPrice =currentPriceWrap.innerText;
+       b++;
       cartamount.innerHTML = `
          <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -38,7 +38,7 @@ prices.forEach(price => {
                                           <div class="col-md-4 mini-sec">
                                                <h3 class="drink-name">Oceaneyes 4</h3>
                                                <p class="drink-cat">Beer</p>
-                                               <p class="drink-price">${newPrice}</p>
+                                               <p class="drink-price">${currentPrice}</p>
                                                <div class="minicart-btn">
                                                     <div class="increase"><i class="fa fa-plus"></i></div>
                                                     <div class="vr"></div>
@@ -62,6 +62,7 @@ prices.forEach(price => {
         let decreaseBtn = cart.querySelector(".decrease");
         let amountPage = cart.querySelector(".amount");
         let removeBtn = cart.querySelector(".removeBtn");
+        let drinkPrice = cart.querySelector(".removeBtn");
         increaseBtn.addEventListener(
           "click",
           (() => {
@@ -69,6 +70,8 @@ prices.forEach(price => {
             return () => {
               cartObject.quantity++;
               amountPage.textContent = cartObject.quantity;
+              totalPrice = realcurrentPrice *2;
+              console.log(object);
             };
           })()
         );
@@ -104,10 +107,10 @@ prices.forEach(price => {
           </span>
           `;
         };
+   
       });
     };
   });
-});
 
 drinksBtn.forEach((btn) => {
   btn.onclick = () => {
