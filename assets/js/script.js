@@ -77,20 +77,20 @@ cartBtn.forEach((btn) => {
               cartObject.quantity--;
               amountPage.textContent = cartObject.quantity;
             }
-            if (cartObject.quantity <= 1) {
+            if (cartObject.quantity < 1) {
               cartamount.innerHTML = `
-          <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            ${(b -= 1)}
-            <span class="visually-hidden">unread messages</span>
-          </span>
-          `;
+                  <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    ${(b -= 1)}
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                  `;
               cart.style.display = "none";
             }
           };
         })()
       );
-      removeBtn.onclick=()=>{
+      removeBtn.onclick = () => {
         cart.style.display = "none";
         cartamount.innerHTML = `
         <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
@@ -99,7 +99,7 @@ cartBtn.forEach((btn) => {
           <span class="visually-hidden">unread messages</span>
         </span>
         `;
-      }
+      };
     });
   };
 });
