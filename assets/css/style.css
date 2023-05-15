@@ -411,6 +411,10 @@ font-size: 1rem;
 
 
 }
+.total{
+     font-family: 'Play', sans-serif;
+font-size: 1.5rem;
+}
 .remove-sec{
      position: absolute;
      bottom: 0;
