@@ -22,11 +22,11 @@ let total = singleelem(".total");
       let currentPriceWrap = btn.closest(".drinks").querySelector(".price");
         let currentPrice =currentPriceWrap.innerText;
         let newP = parseInt(currentPrice);
-         prizearray.push(newP);
-         let sumTotal = prizearray.reduce((a,b)=>
-          a+b
-         ,0);
-              total.innerHTML = `<p class="price">Total :<i class="fa fa-naira-sign"></i>${sumTotal}</p>`;       
+        prizearray.push(newP);
+        let sumTotal = prizearray.reduce((a,b)=>
+        a+b
+       ,0);
+       console.log(prizearray);
        b++;
       cartamount.innerHTML = `
          <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
@@ -89,6 +89,8 @@ let total = singleelem(".total");
                 cartObject.quantity--;
                 amountPage.textContent = cartObject.quantity;
                 updateTotalPrice();
+              prizearray.pop();
+              console.log(prizearray);
               }
               if (cartObject.quantity < 1) {
                 cartamount.innerHTML = `
@@ -98,6 +100,7 @@ let total = singleelem(".total");
                       <span class="visually-hidden">unread messages</span>
                     </span>
                     `;
+                updateTotalPrice();
                 cart.style.display = "none";
               }
             };
@@ -108,6 +111,7 @@ let total = singleelem(".total");
           const cartObject = carts[cartId];
           return () => {
             if (cartObject.quantity > 0) {
+              prizearray.pop();
               cartObject.quantity = 0;
               amountPage.textContent = cartObject.quantity;
               updateTotalPrice();
@@ -119,6 +123,7 @@ let total = singleelem(".total");
                 <span class="visually-hidden">unread messages</span>
               </span>
               `;
+              console.log(prizearray);
             }
           };
         })());
@@ -131,6 +136,8 @@ let total = singleelem(".total");
         }
       });
     };
+    total.innerHTML = `<p class="price">Total :<i class="fa fa-naira-sign"></i>${sumTotal}</p>`;       
+
   });
 
 drinksBtn.forEach((btn) => {
