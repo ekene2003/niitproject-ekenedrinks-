@@ -23,9 +23,8 @@ let total = singleelem(".total");
         let currentPrice =currentPriceWrap.innerText;
         let newP = parseInt(currentPrice);
         prizearray.push(newP);
-        let sumTotal = prizearray.reduce((a,b)=>
-        a+b
-       ,0);
+        let sumTotal = prizearray.reduce((a,b)=>a+b,0)
+       total.innerHTML = `<p class="price">Total :<i class="fa fa-naira-sign"></i>${sumTotal}</p>`;       
        console.log(prizearray);
        b++;
       cartamount.innerHTML = `
@@ -89,8 +88,6 @@ let total = singleelem(".total");
                 cartObject.quantity--;
                 amountPage.textContent = cartObject.quantity;
                 updateTotalPrice();
-              prizearray.pop();
-              console.log(prizearray);
               }
               if (cartObject.quantity < 1) {
                 cartamount.innerHTML = `
@@ -102,6 +99,8 @@ let total = singleelem(".total");
                     `;
                 updateTotalPrice();
                 cart.style.display = "none";
+                prizearray.pop();
+              console.log(prizearray);
               }
             };
           })()
@@ -136,8 +135,6 @@ let total = singleelem(".total");
         }
       });
     };
-    total.innerHTML = `<p class="price">Total :<i class="fa fa-naira-sign"></i>${sumTotal}</p>`;       
-
   });
 
 drinksBtn.forEach((btn) => {
