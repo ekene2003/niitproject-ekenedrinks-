@@ -100,7 +100,6 @@ let total = singleelem(".total");
                 updateTotalPrice();
                 cart.style.display = "none";
                 prizearray.pop();
-              console.log(prizearray);
               }
             };
           })()
