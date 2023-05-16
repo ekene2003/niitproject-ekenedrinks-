@@ -99,7 +99,9 @@ let total = singleelem(".total");
                     `;
                 updateTotalPrice();
                 cart.style.display = "none";
+                prizearray = []; 
                 prizearray.pop();
+              console.log(prizearray);
               }
             };
           })()
@@ -109,6 +111,7 @@ let total = singleelem(".total");
           const cartObject = carts[cartId];
           return () => {
             if (cartObject.quantity > 0) {
+              prizearray = []; 
               prizearray.pop();
               cartObject.quantity = 0;
               amountPage.textContent = cartObject.quantity;

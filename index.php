@@ -1,6 +1,8 @@
+<?php
+require_once("./config/db.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
-
      <head>
           <meta charset="UTF-8">
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +40,7 @@
                     <li><a href="#order">Order</a></li>
                </ul>
                <div class="user-section">
-                    <a href="./login.html" class="user-link"><i class="fa fa-user"></i></a>
+                    <a href="./login.php" class="user-link"><i class="fa fa-user"></i></a>
                     <a href="./search.html" class="user-link"><i class="fa fa-search"></i></a>
                     <div class="cart-a" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                          <div class="position-relative badge-no">    

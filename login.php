@@ -32,14 +32,14 @@
           <header class="login-header">
                <h1 class="header-tittle">Ekene Drinks</h1>
                <ul class="links">
-                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.php">Home</a></li>
                     <li><a href="#about">About us</a></li>
                     <li><a href="#category">Categories</a></li>
                     <li><a href="#drinks">Drinks</a></li>
                     <li><a href="#order">Order</a></li>
                </ul>
                <div class="user-section">
-                    <a href="login.html" class="user-link"><i class="fa fa-user"></i></a>
+                    <a href="login.php" class="user-link"><i class="fa fa-user"></i></a>
                     <a href="" class="user-link"><i class="fa fa-search"></i></a>
                     <a href="" class="user-link"><i class="fa fa-cart-shopping"></i></a>
                </div>
