@@ -23,16 +23,11 @@ $create_admins_table = "CREATE TABLE IF NOT EXISTS admins (
     passkey VARCHAR(50) NOT NULL,
     status TINYINT(2) DEFAULT 1,
     access TINYINT(2) DEFAULT 1,
-    token VARCHAR(50) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci, ENGINE=InnoDB";
 $conn->query($create_admins_table);
-if ($conn->query($create_admins_table) === TRUE) {
-    echo "Table 'products' created successfully.";
-} else {
-    echo "Error creating table: " . $conn->error;
-}
+
 
 
 $create_users_table = "CREATE TABLE IF NOT EXISTS users (
