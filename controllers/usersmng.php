@@ -1,7 +1,7 @@
 
 <?php
       require_once("../config/db.php");
-      require_once("./mailmgt.php");
+      require_once("../mailmgt.php");
       $users_table = "users";
       $folder = $_SERVER['DOCUMENT_ROOT']."/foodihub";
       if(isset($_POST['loginAction'])){
@@ -36,12 +36,11 @@
       }
       if(isset($_POST['signupAction'])){
       // var_dump($_POST);
+   
       // var_dump($_FILES);
       // die();
       $firstname = $conn->real_escape_string($_POST['firstname']);
-      // $firstname = ucfirst($firstname); 
       $lastname = $conn->real_escape_string($_POST['lastname']);
-      // $lastname = ucfirst($lastname);
       $fullname = ucwords("$firstname $lastname"); 
       $username = $conn->real_escape_string($_POST['username']);
       $username = strtolower($username);
@@ -49,8 +48,6 @@
       $email = strtolower($email);
       $password= $conn->real_escape_string($_POST['password']);
       $password = crypt($password, "p55w0rd");
-
-
       // password encryption and hashing mechanisms in php:
       // md5($password), sha1($password, FALSE); crypt ($password, "secretCombination")
       // md5()
