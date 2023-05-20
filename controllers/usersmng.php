@@ -5,11 +5,11 @@
       $users_table = "users";
       $folder = $_SERVER['DOCUMENT_ROOT']."/foodihub";
       if(isset($_POST['loginAction'])){
-            $username = $db->real_escape_string($_POST['username']);
+            $username = $conn->real_escape_string($_POST['username']);
             $username = strtolower($username);
-            $password = $db->real_escape_string($_POST['password']);
+            $password = $conn->real_escape_string($_POST['password']);
             $password = crypt($password, "p55w0rd");
-            $stmt = $db->prepare("SELECT CONCAT(firstname, ' ', lastname) AS fullname, email,username,user_id,token AS user_token,status,image FROM $users_table WHERE username = ? OR email = ? AND password = ? LIMIT 1");
+            $stmt = $conn->prepare("SELECT CONCAT(firstname, ' ', lastname) AS fullname, email,username,user_id,token AS user_token,status,image FROM $users_table WHERE username = ? OR email = ? AND password = ? LIMIT 1");
             $stmt->bind_param("sss", $username, $username, $password);
             $stmt->execute();
             $res = $stmt->get_result();
@@ -38,16 +38,16 @@
       // var_dump($_POST);
       // var_dump($_FILES);
       // die();
-      $firstname = $db->real_escape_string($_POST['firstname']);
+      $firstname = $conn->real_escape_string($_POST['firstname']);
       // $firstname = ucfirst($firstname); 
-      $lastname = $db->real_escape_string($_POST['lastname']);
+      $lastname = $conn->real_escape_string($_POST['lastname']);
       // $lastname = ucfirst($lastname);
       $fullname = ucwords("$firstname $lastname"); 
-      $username = $db->real_escape_string($_POST['username']);
+      $username = $conn->real_escape_string($_POST['username']);
       $username = strtolower($username);
-      $email = $db->real_escape_string($_POST['email']);
+      $email = $conn->real_escape_string($_POST['email']);
       $email = strtolower($email);
-      $password= $db->real_escape_string($_POST['password']);
+      $password= $conn->real_escape_string($_POST['password']);
       $password = crypt($password, "p55w0rd");
 
 
@@ -56,9 +56,8 @@
       // md5()
       //sha1()
       //crypt()
-
-      //   $checkUser = $db->query("SELECT username,email FROM $users_table WHERE username = '$username' OR email = '$email'");
-      $stmt = $db->prepare("SELECT username,email FROM $users_table WHERE username = ? OR email = ?");
+      //   $checkUser = $conn->query("SELECT username,email FROM $users_table WHERE username = '$username' OR email = '$email'");
+      $stmt = $conn->prepare("SELECT username,email FROM $users_table WHERE username = ? OR email = ?");
       $stmt->bind_param("ss",$username, $email);
       $stmt->execute();
       $checkUser = $stmt->get_result();
@@ -80,14 +79,14 @@
             $token = str_shuffle("82734bha9sydyrf9qw8e4");
             $image_report = "";
             try {
-               $db->autocommit(false);//starting a Transaction
+               $conn->autocommit(false);//starting a Transaction
             $userImage = "$username.$ext";
-               $insertStmt = $db->prepare("INSERT INTO $users_table (firstname,lastname,password,username,email,image,token) VALUES (?,?,?,?,?,?,?)");
+               $insertStmt = $conn->prepare("INSERT INTO $users_table (firstname,lastname,password,username,email,image,token) VALUES (?,?,?,?,?,?,?)");
                $insertStmt->bind_param("sssssss",$firstname,$lastname,$password,$username,$email,$userImage,$token);
                $insertStmt->execute();
                $res = $insertStmt->get_result();
                // $altbody = "http://www.jumia.com/verify?"
-               $altbody = "localhost/login/verify.php?email=$email&token=$token";
+               // $altbody = "localhost/login/verify.php?email=$email&token=$token";
                $body = <<<_HTML
                <section style="box-sizing: border-box">
                   <h3 style="background: #097; color: white;">Welcome $fullname</h3>
@@ -97,7 +96,7 @@
       _HTML;
                // $mail = new Mailer($email, "Login Site: Email Verification", $body, $altbody);
                // $mail->sendMail();
-               $db->autocommit(true);//Ending the Transaction
+               $conn->autocommit(true);//Ending the Transaction
                if($res){
                   $upload = move_uploaded_file($_FILES['image']['tmp_name'], "$folder/images/users/$username.$ext");
                   if(!$upload) $user_report .= "Image upload unsuccessful. ";
@@ -112,7 +111,6 @@
          else{
             echo json_encode(['status' => false, 'title' => 'Invalid image extension', 'comment' => 'Invalid Image extension. Only jpg, jpeg or png are allowed', 'icon' => 'error', 'btn' => 'btn btn-error'],true);
          }
-         
       }
       }
       ?>
