@@ -1,7 +1,7 @@
 
 <?php
       require_once("../config/db.php");
-      require_once("../mailmgt.php");
+      require_once("../controllers/mailmgt.php");
       $users_table = "users";
       $folder = $_SERVER['DOCUMENT_ROOT']."/foodihub";
       if(isset($_POST['loginAction'])){

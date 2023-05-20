@@ -29,6 +29,4 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bangers&family=Castoro+Titling&family=Cinzel:wght@400;600&family=Cormorant&family=Dancing+Script:wght@500&family=Edu+TAS+Beginner&family=Edu+VIC+WA+NT+Beginner&family=Exo:wght@300&family=Genos:ital,wght@0,400;1,100&family=IBM+Plex+Serif:wght@300&family=Lobster&family=Monoton&family=Nanum+Gothic&family=Play&family=Press+Start+2P&family=Roboto+Flex:opsz,wght@8..144,200&family=Roboto+Slab:wght@100;300&family=Silkscreen&display=swap"
           rel="stylesheet">
-          <script src="../assets/js/jquery.js"></script>
-       <script src="../assets/js/sweetalert.min.js"></script>
 </head>

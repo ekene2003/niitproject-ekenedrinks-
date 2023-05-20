@@ -129,6 +129,8 @@ require_once("./includes/loginheader.php");
                </div>
                </div>
           </footer>
+          <script src="../assets/js/jquery.js"></script>
+       <script src="../assets/js/sweetalert.min.js"></script>
           <script>
                               function singleelem(elem) {
                     return document.querySelector(elem);
@@ -160,7 +162,7 @@ require_once("./includes/loginheader.php");
                 }
           </script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-          <script src="./assets/js/all.min.js"></script>
+          <script src="./js/all.min.js"></script>
      </body>
 
 </html>
