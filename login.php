@@ -63,7 +63,7 @@ require_once("./includes/loginheader.php");
                                         <input type="file" class="form-control" id="profile"
                                               name="image">
                                    </div>
-                                   <button class="order-submitBtn">Sign Up</button>
+                                   <button class="order-submitBtn" type="submit">Sign Up</button>
                               <div class="signup-small mt-3 text-center">Have an account? Login</div>
                               </form>
                               <form action="" method="post" class="login-form mt-5">
@@ -81,7 +81,7 @@ require_once("./includes/loginheader.php");
                                         <input type="password" class="form-control" id="password"
                                          name="password" placeholder="*******">
                                    </div>
-                                   <button class="order-submitBtn">Login</button>
+                                   <button type="submit" class="order-submitBtn">Login</button>
                               <div class="login-small mt-3 text-center">Don't have an account? Signup</div>
                               </form>
                          </div>
