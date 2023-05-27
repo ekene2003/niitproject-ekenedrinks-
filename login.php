@@ -158,6 +158,11 @@ require_once("./includes/loginheader.php");
                     <h3 class="text-center mb-5 mt-5">Sign up</h3>
                     `;
                 }
+                $(".nav-link").each(function(){
+                let page = location.pathname.split("/")[2], text = this.textContent.toLowerCase(), href = $(this).attr("href");
+                if(page == "" && href == "./") $(this).addClass("active");
+                else if (page == href.substring(2)) $(this).addClass("active");
+            })
           </script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
           <script src="./js/all.min.js"></script>
