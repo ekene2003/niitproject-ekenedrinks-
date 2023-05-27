@@ -129,8 +129,6 @@ require_once("./includes/loginheader.php");
                </div>
                </div>
           </footer>
-          <script src="../assets/js/jquery.js"></script>
-       <script src="../assets/js/sweetalert.min.js"></script>
           <script>
                               function singleelem(elem) {
                     return document.querySelector(elem);
