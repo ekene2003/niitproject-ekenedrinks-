@@ -63,7 +63,7 @@ require_once("./includes/loginheader.php");
                                         <input type="file" class="form-control" id="profile"
                                               name="image">
                                    </div>
-                                   <button class="order-submitBtn" type="submit">Sign Up</button>
+                                    <input type="submit" class="order-submitBtn" value="Submit">
                               <div class="signup-small mt-3 text-center">Have an account? Login</div>
                               </form>
                               <form action="" method="post" class="login-form mt-5">
@@ -81,7 +81,7 @@ require_once("./includes/loginheader.php");
                                         <input type="password" class="form-control" id="password"
                                          name="password" placeholder="*******">
                                    </div>
-                                   <button type="submit" class="order-submitBtn">Login</button>
+                                    <input type="submit" value="Login" class="order-submitBtn">
                               <div class="login-small mt-3 text-center">Don't have an account? Signup</div>
                               </form>
                          </div>
@@ -129,6 +129,7 @@ require_once("./includes/loginheader.php");
                </div>
                </div>
           </footer>
+          <script src="./js/all.min.js"></script>
           <script>
                               function singleelem(elem) {
                     return document.querySelector(elem);
@@ -158,14 +159,8 @@ require_once("./includes/loginheader.php");
                     <h3 class="text-center mb-5 mt-5">Sign up</h3>
                     `;
                 }
-                $(".nav-link").each(function(){
-                let page = location.pathname.split("/")[2], text = this.textContent.toLowerCase(), href = $(this).attr("href");
-                if(page == "" && href == "./") $(this).addClass("active");
-                else if (page == href.substring(2)) $(this).addClass("active");
-            })
           </script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-          <script src="./js/all.min.js"></script>
      </body>
 
 </html>
