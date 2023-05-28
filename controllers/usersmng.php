@@ -3,7 +3,7 @@
       require_once("../config/db.php");
       require_once("./mailmgt.php");
       $users_table = "users";
-      $folder = $_SERVER['DOCUMENT_ROOT']."/foodihub";
+      $folder = $_SERVER['DOCUMENT_ROOT']."/niitproject(ekenedrinks)";
       if(isset($_POST['loginAction'])){
             $username = $conn->real_escape_string($_POST['username']);
             $username = strtolower($username);

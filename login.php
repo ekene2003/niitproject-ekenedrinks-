@@ -1,7 +1,7 @@
 <?php
 require_once("./config/db.php");
 require_once("./includes/loginheader.php");
-?>
+?> 
 
      <body class="form-body">
           <img src="./assets/images/PEPSI BLACK CGI.png" alt="" class="login-form-bg">
