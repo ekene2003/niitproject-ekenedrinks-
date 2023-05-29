@@ -2,8 +2,7 @@
 require_once("./config/db.php");
 require_once("./includes/loginheader.php");
 ?> 
-
-     <body class="form-body">
+  <body class="form-body">
           <img src="./assets/images/PEPSI BLACK CGI.png" alt="" class="login-form-bg">
           <header class="login-header">
                <h1 class="header-tittle">Ekene Drinks</h1>
