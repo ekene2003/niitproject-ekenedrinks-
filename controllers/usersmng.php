@@ -47,13 +47,7 @@
       $email = $conn->real_escape_string($_POST['email']);
       $email = strtolower($email);
       $password= $conn->real_escape_string($_POST['password']);
-      $password = crypt($password, "p55w0rd");
-      // password encryption and hashing mechanisms in php:
-      // md5($password), sha1($password, FALSE); crypt ($password, "secretCombination")
-      // md5()
-      //sha1()
-      //crypt()
-      //   $checkUser = $conn->query("SELECT username,email FROM $users_table WHERE username = '$username' OR email = '$email'");
+      $password = crypt($password, "p55w0rd");;
       $stmt = $conn->prepare("SELECT username,email FROM $users_table WHERE username = ? OR email = ?");
       $stmt->bind_param("ss",$username, $email);
       $stmt->execute();
