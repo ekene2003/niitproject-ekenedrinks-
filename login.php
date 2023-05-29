@@ -30,33 +30,33 @@ require_once("./includes/loginheader.php");
                                    <div class="mb-3 col-md-6">
                                         <label for="firstname" class="form-label">First name</label>
                                         <input type="text" class="form-control" id="firstname" name="firstname"
-                                             placeholder="your firstname">
+                                             placeholder="your firstname" required>
                                    </div>
                                    <div class="mb-3 col-md-6">
                                         <label for="lastname" class="form-label">Last name</label>
                                         <input type="text" class="form-control" name="lastname" id="lastname"
-                                             placeholder="your lastname">
+                                             placeholder="your lastname" required>
                                    </div>
                                    <div class="mb-3 col-md-6">
                                         <label for="username" class="form-label">Username</label>
                                         <input type="text" class="form-control" name="username" id="username"
-                                             placeholder="your username">
+                                             placeholder="your username" required>
                                    </div>
                                    <div class="mb-3 col-md-6">
                                         <label for="email" class="form-label">Email address</label>
                                         <input type="email" class="form-control" name="email" id="email"
-                                             placeholder="name@example.com">
+                                             placeholder="name@example.com" required>
                                    </div>
                                    <div class="mb-3 col-md-6">
                                         <label for="password" class="form-label">Password</label>
                                         <input type="password" class="form-control" id="password"
-                                             placeholder="*******" name="password">
+                                             placeholder="*******" name="password" required>
                                    </div> 
                                    <div class="mb-3 col-md-6">
                                         <label for="c-pass" class="form-label">Confirm
                                              Password</label>
                                         <input type="password" class="form-control" id="c-pass"
-                                             placeholder="******" name="cpassword">
+                                             placeholder="******" name="cpassword" required>
                                    </div>
                                    <div class="mb-3 col-md-12">
                                         <label for="profile" class="form-label">Profile picture </label>
@@ -74,12 +74,12 @@ require_once("./includes/loginheader.php");
                                    <div class="mb-3">
                                         <label for="username" class="form-label">Username</label>
                                         <input type="text" class="form-control" id="username"
-                                         name="username" placeholder="your username">
+                                         name="username" placeholder="your username" required>
                                    </div>
                                    <div class="mb-3">
                                         <label for="password" class="form-label">Password</label>
                                         <input type="password" class="form-control" id="password"
-                                         name="password" placeholder="*******">
+                                         name="password" placeholder="*******" required>
                                    </div>
                                     <input type="submit" value="Login" class="order-submitBtn">
                               <div class="login-small mt-3 text-center">Don't have an account? Signup</div>
