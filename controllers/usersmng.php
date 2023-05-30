@@ -74,7 +74,8 @@ if(isset($_POST['signupAction'])){
      if($email == $foundEmail && $username == $foundUsername) echo json_encode(['status' => false, 'title' => ' Username/email taken', 'comment' => 'A member with this Username/email already exists. Please try another', 'icon' => 'error', 'btn' => 'btn btn-error'],true);
      else if($username == $foundUsername)echo json_encode(['status' => false, 'title' => 'Username Taken', 'comment' => 'A member with this username already exists. Please try another', 'icon' => 'error', 'btn' => 'btn btn-error'],true);
      else echo json_encode(['status' => false, 'title' => 'Email taken', 'comment' => 'A member with this email already exists. Please try another', 'icon' => 'error', 'btn' => 'btn btn-error'],true);
-  }else{
+  }
+  else{
      // file upload in php
 
      $image = $_FILES['image']['name'];
