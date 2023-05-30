@@ -19,7 +19,6 @@ if(isset($_POST['loginAction'])){
  if($res->num_rows > 0){
    $row = $res->fetch_assoc();
    $_SESSION ['fullname'] = $row["fullname"]; 
-   // $_SESSION ['created_at'] = $row["created_at"];
    $_SESSION ['email'] = $row["email"];
    $_SESSION ['image'] = $row["image"];
    $_SESSION ['username'] = $row["username"];

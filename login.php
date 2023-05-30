@@ -21,7 +21,7 @@ require_once("./includes/loginheader.php");
           </header>
           <div class="form-section" id="order">
                <div class="container">
-                              <form action="" method="post" class="signup-form row">
+                              <form action="./" method="post" class="signup-form row">
                                    <input type="hidden" name="signupAction">
                                    <div class="form-section-title">
                                         <h3 class="text-center mb-4 form-tittle">Sign up</h3>
