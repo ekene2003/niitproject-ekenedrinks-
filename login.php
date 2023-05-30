@@ -21,7 +21,7 @@ require_once("./includes/loginheader.php");
           </header>
           <div class="form-section" id="order">
                <div class="container">
-                              <form action="./" method="post" class="signup-form row">
+                              <form action="./controllers/usersmng.php" method="post" class="signup-form row">
                                    <input type="hidden" name="signupAction">
                                    <div class="form-section-title">
                                         <h3 class="text-center mb-4 form-tittle">Sign up</h3>
@@ -65,7 +65,7 @@ require_once("./includes/loginheader.php");
                                     <input type="submit" class="order-submitBtn" value="Submit">
                               <div class="signup-small mt-3 text-center">Have an account? Login</div>
                               </form>
-                              <form action="" method="post" class="login-form mt-5">
+                              <form action="./controllers/usersmng.php" method="post" class="login-form mt-5">
                                    <input type="hidden" name="loginAction">
                                    <div class="form-section-title">
                                         <h3 class="text-center mb-4 form-tittle">Login</h3>

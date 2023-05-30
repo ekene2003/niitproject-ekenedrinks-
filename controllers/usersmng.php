@@ -76,7 +76,6 @@ if(isset($_POST['signupAction'])){
   }
   else{
      // file upload in php
-
      $image = $_FILES['image']['name'];
      $filename = basename($image);
      $filename = strtolower($filename);
@@ -86,7 +85,7 @@ if(isset($_POST['signupAction'])){
       $token = str_shuffle("82734bha9sydyrf9qw8e4");
       $image_report = "";
       try {
-         $conn->autocommit(false);//starting a Transaction
+         // $conn->autocommit(false);//starting a Transaction
 
          // $insertQuery = "INSERT INTO $users_table (fullname,password,username,email,image,token) VALUES ('$fullname','$password','$username','$email','$username.$ext','$token')";
          // $res = $conn->query($insertQuery);
