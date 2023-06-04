@@ -10,7 +10,7 @@ if ( isset( $_POST[ 'loginAction' ] ) ) {
     $password = crypt( $password, 'p55w0rd' );
     //   $stmt = "SELECT * FROM $users_table WHERE username = '$username' AND password = '$password' LIMIT 1";
     // 1. Prepare( stmt ), 2. [ if any ] bind_param, 3. execute, 4. get_result();
-    5. //num_rows, 6. fetch_assoc();
+    // 5. //num_rows, 6. fetch_assoc();
     $stmt = $conn->prepare( "SELECT CONCAT(firstname, ' ', lastname) AS fullname, email,username,user_id,token AS user_token,status,image FROM $users_table WHERE username = ? OR email = ? AND password = ? LIMIT 1" );
     $stmt->bind_param( 'sss', $username, $username, $password );
     $stmt->execute();
@@ -47,7 +47,7 @@ if ( isset( $_POST['signupAction'] ) ) {
     $email = $conn->real_escape_string( $_POST[ 'email' ] );
     $email = strtolower( $email );
     $password = $conn->real_escape_string( $_POST[ 'password' ] );
-    $password = crypt( $password, 'p55w0rd' )
+    $password = crypt( $password, 'p55w0rd' );
     // password encryption and hashing mechanisms in php:
     // md5( $password ), sha1( $password, FALSE );
    //  crypt ( $password, 'secretCombination' )
