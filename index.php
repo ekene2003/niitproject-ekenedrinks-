@@ -217,7 +217,7 @@ require_once("./config/db.php");
                     </div>
                </div>
           </div>
-          <div class="drinks-section" id="drinks">
+          <div class="drinks-section" id="drinks">4
                <div class="container">
                     <div class="row">
                          <h1 class="drink-head text-center mt-5">
