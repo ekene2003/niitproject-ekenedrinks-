@@ -12,29 +12,29 @@ let drinksBtn = multielem(".drink-btn");
 let drinks = multielem(".drinks");
 let cartBtn = multielem(".cart");
 let cartWrap = singleelem(".mini-cart-wrap");
-let prices = multielem(".price")
+let prices = multielem(".price");
 let quantity = 1;
 b = 0;
 let prizearray = [];
 let total = singleelem(".total");
-  cartBtn.forEach((btn) => {
-    btn.onclick = () => {
-      let currentPriceWrap = btn.closest(".drinks").querySelector(".price");
-        let currentPrice =currentPriceWrap.innerText;
-        let newP = parseInt(currentPrice);
-        prizearray.push(newP);
-        let sumTotal = prizearray.reduce((a,b)=>a+b,0)
-       total.innerHTML = `<p class="price">Total :<i class="fa fa-naira-sign"></i>${sumTotal}</p>`;       
-       console.log(prizearray);
-       b++;
-      cartamount.innerHTML = `
+cartBtn.forEach((btn) => {
+  btn.onclick = () => {
+    let currentPriceWrap = btn.closest(".drinks").querySelector(".price");
+    let currentPrice = currentPriceWrap.innerText;
+    let newP = parseInt(currentPrice);
+    prizearray.push(newP);
+    let sumTotal = prizearray.reduce((a, b) => a + b, 0);
+    total.innerHTML = `<p class="price">Total :<i class="fa fa-naira-sign"></i>${sumTotal}</p>`;
+    console.log(prizearray);
+    b++;
+    cartamount.innerHTML = `
          <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
            ${b}
            <span class="visually-hidden">unread messages</span>
          </span>
          `;
-      cartWrap.innerHTML += `
+    cartWrap.innerHTML += `
                                   <div class="mini-cart" id="cart${b}">
                                      <div class="cart-wrap">
                                           <div class="col-md-4">
@@ -58,60 +58,64 @@ let total = singleelem(".total");
                                      </div>
                                 </div>            
       `;
-      let minicart = multielem(".mini-cart");
-      carts = {};
-      minicart.forEach((cart) => {
-        let cartId = cart.getAttribute("id");
-        let price = parseFloat(cart.querySelector(".drink-price").textContent.slice(1));
-        carts[cartId] = { quantity: 1,price };
-        let increaseBtn = cart.querySelector(".increase");
-        let decreaseBtn = cart.querySelector(".decrease");
-        let amountPage = cart.querySelector(".amount");
-        let removeBtn = cart.querySelector(".removeBtn");
-        increaseBtn.addEventListener(
-          "click",
-          (() => {
-            const cartObject = carts[cartId];
-            return () => {
-              cartObject.quantity++;
+    let minicart = multielem(".mini-cart");
+    carts = {};
+    minicart.forEach((cart) => {
+      let cartId = cart.getAttribute("id");
+      let price = parseFloat(
+        cart.querySelector(".drink-price").textContent.slice(1)
+      );
+      carts[cartId] = { quantity: 1, price };
+      let increaseBtn = cart.querySelector(".increase");
+      let decreaseBtn = cart.querySelector(".decrease");
+      let amountPage = cart.querySelector(".amount");
+      let removeBtn = cart.querySelector(".removeBtn");
+      increaseBtn.addEventListener(
+        "click",
+        (() => {
+          const cartObject = carts[cartId];
+          return () => {
+            cartObject.quantity++;
+            amountPage.textContent = cartObject.quantity;
+            updateTotalPrice();
+          };
+        })()
+      );
+      decreaseBtn.addEventListener(
+        "click",
+        (() => {
+          const cartObject = carts[cartId];
+          return () => {
+            if (cartObject.quantity > 0) {
+              cartObject.quantity--;
               amountPage.textContent = cartObject.quantity;
               updateTotalPrice();
-            };
-          })()
-        );
-        decreaseBtn.addEventListener(
-          "click",
-          (() => {
-            const cartObject = carts[cartId];
-            return () => {
-              if (cartObject.quantity > 0) {
-                cartObject.quantity--;
-                amountPage.textContent = cartObject.quantity;
-                updateTotalPrice();
-              }
-              if (cartObject.quantity < 1) {
-                cartamount.innerHTML = `
+            }
+            if (cartObject.quantity < 1) {
+              cartamount.innerHTML = `
                     <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                       ${(b -= 1)}
                       <span class="visually-hidden">unread messages</span>
                     </span>
                     `;
-                updateTotalPrice();
-                cart.style.display = "none";
-                prizearray = []; 
-                prizearray.pop();
+              updateTotalPrice();
+              cart.style.display = "none";
+              prizearray = [];
+              prizearray.pop();
               console.log(prizearray);
-              }
-            };
-          })()
-        );
+            }
+          };
+        })()
+      );
 
-        removeBtn.addEventListener("click", (() => {
+      removeBtn.addEventListener(
+        "click",
+        (() => {
           const cartObject = carts[cartId];
           return () => {
             if (cartObject.quantity > 0) {
-              prizearray = []; 
+              prizearray = [];
               prizearray.pop();
               cartObject.quantity = 0;
               amountPage.textContent = cartObject.quantity;
@@ -127,17 +131,20 @@ let total = singleelem(".total");
               console.log(prizearray);
             }
           };
-        })());
-        function updateTotalPrice() {
-          let totalPrice = 0;
-          Object.values(carts).forEach((cart) => {
-            totalPrice += cart.quantity * cart.price;
-          });
-          total.innerHTML = `<p class="price">Total :<i class="fa fa-naira-sign"></i> ${+ totalPrice.toFixed(2)}</p>`;
-        }
-      });
-    };
-  });
+        })()
+      );
+      function updateTotalPrice() {
+        let totalPrice = 0;
+        Object.values(carts).forEach((cart) => {
+          totalPrice += cart.quantity * cart.price;
+        });
+        total.innerHTML = `<p class="price">Total :<i class="fa fa-naira-sign"></i> ${+totalPrice.toFixed(
+          2
+        )}</p>`;
+      }
+    });
+  };
+});
 
 drinksBtn.forEach((btn) => {
   btn.onclick = () => {
