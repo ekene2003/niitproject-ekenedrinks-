@@ -141,6 +141,8 @@ let total = singleelem(".total");
 
 drinksBtn.forEach((btn) => {
   btn.onclick = () => {
+    btn.style.background = "grey";
+    btn.style.color = "white";
     let category = btn.dataset.category;
     console.log(category);
     drinks.forEach((drink) => {
