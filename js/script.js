@@ -148,8 +148,9 @@ cartBtn.forEach((btn) => {
 
 drinksBtn.forEach((btn) => {
   btn.onclick = () => {
-    btn.style.background = "grey";
-    btn.style.color = "white";
+    drinksBtn.forEach(button => {
+      button.classlist.remove("active");
+    });
     let category = btn.dataset.category;
     console.log(category);
     drinks.forEach((drink) => {

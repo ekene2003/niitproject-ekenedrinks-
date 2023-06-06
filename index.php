@@ -224,7 +224,7 @@ require_once("./config/db.php");
                               Drinks
                          </h1>
                          <div class="drink-category d-flex justify-content-center gap-5 mt-5">
-                              <button class="drink-btn col-md-2" data-category="all">
+                              <button class="drink-btn col-md-2 current" data-category="all">
                                    All
                               </button>
                               <button class="drink-btn col-md-2" data-category="soft drink">
