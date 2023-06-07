@@ -148,9 +148,10 @@ cartBtn.forEach((btn) => {
 
 drinksBtn.forEach((btn) => {
   btn.onclick = () => {
-    drinksBtn.forEach(button => {
-      button.classlist.remove("active");
+    drinksBtn.forEach(elem => {
+      elem.classList.remove("current");
     });
+    btn.classList.add("current");
     let category = btn.dataset.category;
     console.log(category);
     drinks.forEach((drink) => {
