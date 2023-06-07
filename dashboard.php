@@ -1,4 +1,6 @@
-require_once("./")
+<?php 
+require_once("./includes/header.php")
+?>
 <body>
     
     
