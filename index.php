@@ -34,7 +34,8 @@ require_once("./includes/header.php");
                     <div class="offcanvas-body"> 
                         <div class="row mini-cart-wrap">
                          </div>
-                         <div class="total">0</div>
+                         <p class="cart-alert">your cart is currently empty....</p>
+                         <div class="total"></div>
                     </div>       
                </div>
           </header>

@@ -505,3 +505,11 @@ input{
      background: grey;
      color: white;
 }
+.cart-alert{
+     display: block;
+     padding: 0.4rem;
+     background: red;
+     color: white;
+     font-family: 'Play', sans-serif;
+     font-size: 1.2rem;
+}

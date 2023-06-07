@@ -17,15 +17,16 @@ let quantity = 1;
 b = 0;
 let prizearray = [];
 let total = singleelem(".total");
+let cartAlert = singleelem(".cart-alert");
 cartBtn.forEach((btn) => {
   btn.onclick = () => {
+    cartAlert.style.display = "none";
     let currentPriceWrap = btn.closest(".drinks").querySelector(".price");
     let currentPrice = currentPriceWrap.innerText;
     let newP = parseInt(currentPrice);
     prizearray.push(newP);
     let sumTotal = prizearray.reduce((a, b) => a + b, 0);
     total.innerHTML = `<p class="price">Total :<i class="fa fa-naira-sign"></i>${sumTotal}</p>`;
-    console.log(prizearray);
     b++;
     cartamount.innerHTML = `
          <a class="user-link"><i class="fa fa-cart-shopping"></i></a>
@@ -100,6 +101,7 @@ cartBtn.forEach((btn) => {
                     </span>
                     `;
               updateTotalPrice();
+
               cart.style.display = "none";
               prizearray = [];
               prizearray.pop();
@@ -130,6 +132,7 @@ cartBtn.forEach((btn) => {
               `;
               console.log(prizearray);
             }
+        
           };
         })()
       );
