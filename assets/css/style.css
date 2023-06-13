@@ -519,7 +519,10 @@ input{
      background: #000 !important;
 }
 .dashboard-head-p{
-
+color: red;
+}
+.dashboard-search{
+     
 }
 .dashboard-p{
 
