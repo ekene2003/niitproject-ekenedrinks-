@@ -516,17 +516,37 @@ input{
 .dashboard-header{
      display: flex;
      padding: 1rem;
-     background: #000 !important;
+
 }
 .dashboard-head-p{
-color: red;
 }
 .dashboard-search{
-     
+position: absolute !important;
+right: 10% !important;
+}
+.dashboard-search input{
+     border-radius: 3rem;
+     padding: 0.5rem;
+
 }
 .dashboard-p{
 
 }
 .dashboard-p-head{
+
+}
+.right-dashheader{
+     display: flex;
+     align-items: center;
+}
+.dashboard-toggle{
+     color: white !important;
+     border: 2px solid white !important;
+}
+.searchbtn-dashboard{
+     padding: .3rem;
+     border-radius: 50%;
+     background: white;
+     border: none;
 
 }
