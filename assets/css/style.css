@@ -521,6 +521,8 @@ input{
     background: #f0f2f3;
 }
 .dashboard-head-p{
+     font-family: 'Roboto Flex', sans-serif;
+
 }
 .dashboard-search{
 position: absolute !important;
@@ -530,8 +532,11 @@ right: 14% !important;
      border-radius: 3rem;
      padding: 0.5rem;
 background: transparent;
+font-family: 'Play', sans-serif;
+
 }
 .dashboard-p{
+     font-family: 'Play', sans-serif;
 
 }
 .dashboard-p-head{
@@ -544,7 +549,7 @@ background: transparent;
 }
 .dashboard-toggle{
      color: gray !important;
-     border: 2px solid grey !important;
+     border: 1px solid grey !important;
 }
 .searchbtn-dashboard{
      padding: .3rem;
@@ -556,12 +561,14 @@ background: transparent;
 .signup-dash{
      /* display: flex; */
      position: absolute;
-     right: 5.5%;
+     right: 6%;
 }
 .signup-dash p{
      color: grey;
      text-align: center;
      padding-top: .5rem;
+     font-family: 'Play', sans-serif;
+
 }
 .signup-dash svg{
      height: 1.2rem;
