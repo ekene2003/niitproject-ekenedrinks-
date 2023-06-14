@@ -7,8 +7,8 @@ require_once('./includes/header.php');
   <link rel='stylesheet' href='./assets/'>
   <header class='dashboard-header d-flex justify-content-between p-3'>
     <div class='dashboard-head-p'>
-      <p class='dashboard-p'>Pages/Profile</p>
-      <h3 class='dashboard-p-head'>Profile</h3>
+      <p class='dashboard-p'> <span style="color:darkgrey;">Pages</span>/Profile</p>
+      <h4 class='dashboard-p-head'>Profile</h4>
     </div>
     <div class="right-dashheader">
     <form action='' class='ms-5 flex-5 dashboard-search'>

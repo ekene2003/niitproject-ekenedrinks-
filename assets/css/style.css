@@ -516,7 +516,7 @@ input{
 .dashboard-header{
      display: flex;
      padding: 1rem;
-
+    background: #f0f2f3;
 }
 .dashboard-head-p{
 }
@@ -527,7 +527,7 @@ right: 10% !important;
 .dashboard-search input{
      border-radius: 3rem;
      padding: 0.5rem;
-
+background: transparent;
 }
 .dashboard-p{
 
@@ -540,13 +540,13 @@ right: 10% !important;
      align-items: center;
 }
 .dashboard-toggle{
-     color: white !important;
-     border: 2px solid white !important;
+     color: gray !important;
+     border: 2px solid grey !important;
 }
 .searchbtn-dashboard{
      padding: .3rem;
-     border-radius: 50%;
-     background: white;
-     border: none;
-
+     border-radius: 5rem;
+     background: transparent;
+     border: 2px solid grey;
+       color: gray;
 }
