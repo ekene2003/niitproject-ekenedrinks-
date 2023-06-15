@@ -22,11 +22,20 @@ require_once('./includes/header.php');
       <button class='btn dashboard-toggle ms-4' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasRight' aria-controls='offcanvasRight'><i class="fa fa-bars"></i></button>
       <div class='offcanvas offcanvas-start' tabindex='-1' id='offcanvasRight' aria-labelledby='offcanvasRightLabel'>
         <div class='offcanvas-header'>
-          <h5 class='offcanvas-title' id='offcanvasRightLabel'></h5>
+          <div class="profile-wrap">
+          <img src="./assets/images/pexels-ali-pli-14650660.jpg" id='offcanvasRightLabel' alt="" class="profile-pic">
+          <h5 class='profile-name'>Ekene Favour</h5>   
+          </div>
           <button type='button' class='btn-close' data-bs-dismiss='offcanvas' aria-label='Close'></button>
         </div>
+        <hr>
         <div class='offcanvas-body'>
-          ...
+          <ul class="dashboard-pages">
+            <li>dashboard</li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
       </div>
     </div>
