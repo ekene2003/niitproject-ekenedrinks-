@@ -588,3 +588,18 @@ font-family: 'Play', sans-serif;
      font-family: 'Roboto Flex', sans-serif;
 
 }
+.dashboard-content{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+.dashboard-content li svg{
+margin-right: 1rem;
+height: 1.5rem;
+}
+.dashboard-content li{
+margin-bottom: 2rem;
+font-size: 1.2rem;
+font-family: 'Play', sans-serif;
+cursor: pointer;
+}

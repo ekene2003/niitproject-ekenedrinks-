@@ -30,10 +30,13 @@ require_once('./includes/header.php');
         </div>
         <hr>
         <div class='offcanvas-body'>
-          <ul class="dashboard-pages">
-            <li><i class="fa fa-dashboard"></i> dashboard</li>
+          <ul class="dashboard-content">
+            <li><i class="fa fa-dashboard"></i>Dashboard</li>
             <li><i class="fa fa-list"></i>Orders</li>
-            <li><i class="fa fa-cup"></i></li>
+            <li><i class="fa fa-wine-bottle"></i>Drinks</li>
+            <li><i class="fa fa-user"></i>Profile</li>
+            <li><i class="fa fa-users"></i>Users</li>
+            <li><i class="fa fa-bell"></i>Message</li>
             <li></li>
           </ul>
         </div>
