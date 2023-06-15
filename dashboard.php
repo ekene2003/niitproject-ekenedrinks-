@@ -33,7 +33,7 @@ require_once('./includes/header.php');
           <ul class="dashboard-pages">
             <li><i class="fa fa-dashboard"></i> dashboard</li>
             <li><i class="fa fa-list"></i>Orders</li>
-            <li><i class="fa fa-drink"></i></li>
+            <li><i class="fa fa-cup"></i></li>
             <li></li>
           </ul>
         </div>
