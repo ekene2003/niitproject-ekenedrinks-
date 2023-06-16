@@ -609,3 +609,21 @@ cursor:pointer;
 .sidebar{
      background: lightgrey !important;
 }
+.hero-wrap{
+     padding: 2rem;
+}
+.hero-img{
+     width: 100%;
+     height: 50vh;  
+     border-radius: 1.2rem;
+     object-fit: cover;
+}
+.dashboard-sec1{
+
+}
+.dashboard-dp{
+     width: 4rem;
+     height: 4rem;
+     border-radius: 50%;
+
+}

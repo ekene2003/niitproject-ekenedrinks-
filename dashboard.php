@@ -45,6 +45,13 @@ require_once('./includes/header.php');
       </div>
     </div>
   </header>
+  <section class="hero-wrap">
+    <img src="./assets/images/PEPSI BLACK CGI.png" alt="" class="hero-img">
+  </section>
+  <section class="dashboard-sec1">
+   <img src="./assets/images/Coca Cola.jpeg" alt="" class="dashboard-dp">
+   <h3 class="profile-name">Ekene Favour</h3>
+  </section>
   <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js'></script>
   <script src="./js/all.min.js"></script>
 
