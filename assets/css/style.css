@@ -617,13 +617,40 @@ cursor:pointer;
      height: 50vh;  
      border-radius: 1.2rem;
      object-fit: cover;
+     z-index: 9;
 }
 .dashboard-sec1{
-
+display: flex;
+justify-content: space-between;
+padding: 2rem;
+border: 2px solid black;
+width: 90%;    
+margin-left: 4rem;
+border-radius: 1rem;
+position: absolute;
+z-index: 99;
 }
 .dashboard-dp{
      width: 4rem;
      height: 4rem;
      border-radius: 50%;
+
+}
+.left-dashboard{
+display: flex;
+}
+.dashboard-dp{
+
+}
+.profile{
+
+}
+.profile-name-p{
+
+}
+.right-dashboard{
+
+}
+.db-right-link{
 
 }
