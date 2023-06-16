@@ -15,9 +15,11 @@ require_once('./includes/header.php');
         <button type="submit" class="searchbtn-dashboard"><i class="fa fa-search"></i></button>
       </form>
       <div class="signup-dash">
-      <p class="dashsignup-p"> 
+      <a href="">
+      <p class="dashsignup-p">         
       <i class="fa fa-user"></i>
       Sign In</p>
+        </a>
       </div>
       <button class='btn dashboard-toggle ms-4' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasRight' aria-controls='offcanvasRight'><i class="fa fa-bars"></i></button>
       <div class='offcanvas offcanvas-start sidebar' tabindex='-1' id='offcanvasRight' aria-labelledby='offcanvasRightLabel'>
