@@ -601,5 +601,11 @@ height: 1.5rem;
 margin-bottom: 2rem;
 font-size: 1.2rem;
 font-family: 'Play', sans-serif;
-cursor: pointer;
+cursor:pointer;
+}
+.dashboard-content li:hover{
+     transform: scale(1.1);
+}
+.sidebar{
+     background: lightgrey !important;
 }

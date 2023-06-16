@@ -20,7 +20,7 @@ require_once('./includes/header.php');
       Sign In</p>
       </div>
       <button class='btn dashboard-toggle ms-4' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasRight' aria-controls='offcanvasRight'><i class="fa fa-bars"></i></button>
-      <div class='offcanvas offcanvas-start' tabindex='-1' id='offcanvasRight' aria-labelledby='offcanvasRightLabel'>
+      <div class='offcanvas offcanvas-start sidebar' tabindex='-1' id='offcanvasRight' aria-labelledby='offcanvasRightLabel'>
         <div class='offcanvas-header'>
           <div class="profile-wrap">
           <img src="./assets/images/pexels-ali-pli-14650660.jpg" id='offcanvasRightLabel' alt="" class="profile-pic">
