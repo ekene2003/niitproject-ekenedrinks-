@@ -633,7 +633,8 @@ z-index: 99;
 .dashboard-dp{
      width: 4rem;
      height: 4rem;
-     border-radius: 50%;
+     border-radius: 20%;
+     margin-right: 1.5rem;
 
 }
 .left-dashboard{
@@ -646,11 +647,19 @@ display: flex;
 
 }
 .profile-name-p{
-
+color: grey;
 }
 .right-dashboard{
-
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
 }
 .db-right-link{
-
+     padding: .4rem;
+border-radius: 12px;
+color: gray;
+}
+.active-db-link{
+     box-shadow: 2px 1px 5px 1px grey;
 }
