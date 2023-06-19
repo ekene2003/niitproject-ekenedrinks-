@@ -618,17 +618,20 @@ cursor:pointer;
      border-radius: 1.2rem;
      object-fit: cover;
      z-index: 9;
+     position: relative;
 }
 .dashboard-sec1{
 display: flex;
 justify-content: space-between;
 padding: 2rem;
-border: 2px solid black;
 width: 90%;    
-margin-left: 4rem;
+margin-left: 3.5rem;
 border-radius: 1rem;
 position: absolute;
+top: 60%;
 z-index: 99;
+background: white;
+box-shadow: 1px 2px 2px 2px gray;
 }
 .dashboard-dp{
      width: 4rem;
