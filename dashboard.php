@@ -60,9 +60,9 @@ require_once('./includes/header.php');
       </div>
     </div>
     <div class='right-dashboard'>
-      <a href='' class='db-right-link active-db-link'><i class='fa fa-home'></i>App</a>
-      <a href='' class='db-right-link'><i class='fa fa-envelope '></i>Messages</a>
-      <a href='' class='db-right-link'><i class='fa fa-home'></i>Settings</a>
+      <a href='' class='db-right-link active-db-link'><i class='fa fa-home me-2'></i>App</a>
+      <a href='' class='db-right-link'><i class='fa fa-envelope me-2 '></i>Messages</a>
+      <a href='' class='db-right-link'><i class='fa fa-home me-2'></i>Settings</a>
     </div>
   </section>
   <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js'></script>
