@@ -657,12 +657,28 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 1rem;
+background: #f8f9f8;
+height: 4rem;
+padding: 1rem;
+position: relative;
 }
 .db-right-link{
      padding: .4rem;
 border-radius: 12px;
 color: gray;
+z-index: 99;
 }
-.active-db-link{
+.right-dashboard::before{   
+     content: ""; 
+     height: 2.5rem;
+     width: 5rem;
+background: white;
+position: absolute;
+left: 3.5%;
+border-radius: 1rem;
+z-index: 9;
      box-shadow: 2px 1px 5px 1px grey;
+/* position: absolute; */
+/* right: 0; */
+
 }
