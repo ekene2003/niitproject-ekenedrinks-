@@ -668,17 +668,8 @@ border-radius: 12px;
 color: gray;
 z-index: 99;
 }
-.right-dashboard::before{   
-     content: ""; 
-     height: 2.5rem;
-     width: 5rem;
-background: white;
-position: absolute;
-left: 3.5%;
-border-radius: 1rem;
-z-index: 9;
-     box-shadow: 2px 1px 5px 1px grey;
-/* position: absolute; */
-/* right: 0; */
-
+.active-db-link{
+     padding: .6rem;
+     background: #fffffc;
+     box-shadow: 2px 3px 6px 1px grey;
 }
