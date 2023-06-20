@@ -64,6 +64,9 @@ require_once('./includes/header.php');
       <a href='' class='db-right-link'><i class='fa fa-envelope me-2 '></i>Messages</a>
       <a href='' class='db-right-link'><i class='fa fa-home me-2'></i>Settings</a>
     </div> 
+  </section> 
+  <section class="section2">
+
   </section>
   <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js'></script>
   <script src='./js/all.min.js'></script>
@@ -72,7 +75,10 @@ require_once('./includes/header.php');
     dashboardToggle.forEach(toggle => {
       toggle.onclick=(e)=>{
         e.preventDefault(); 
-        
+        dashboardToggle.forEach(element => {
+          element.classList.remove("active-db-link");
+        });
+        toggle.classList.add("active-db-link"); 
       };
     });
 console.log(dashboardToggle);
