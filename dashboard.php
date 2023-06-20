@@ -73,6 +73,7 @@ require_once('./includes/header.php');
       toggle.onclick=(e)=>{
         e.preventDefault(); 
         
+      };
     });
 console.log(dashboardToggle);
   </script>
