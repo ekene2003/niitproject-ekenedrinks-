@@ -50,24 +50,24 @@ require_once('./includes/header.php');
     <img src='./assets/images/PEPSI BLACK CGI.png' alt='' class='hero-img'>
   </section>
   <section class='dashboard-sec1'>
-    <div class='left-dashboard'>
-      <div class="">
-      <img src='./assets/images/Coca Cola.jpeg' alt='' class='dashboard-dp'>
-      </div>
-      <div class="">
-      <h3 class='profile-n'>Ekene Favour</h3>
-      <p class='profile-name-p'>CEO/co-founder</p>
-      </div>
+    <div class="db-sec-wrap">
+        <div class='left-dashboard'>
+          <div class="">
+          <img src='./assets/images/Coca Cola.jpeg' alt='' class='dashboard-dp'>
+          </div>
+          <div class="">
+          <h3 class='profile-n'>Ekene Favour</h3>
+          <p class='profile-name-p'>CEO/co-founder</p>
+          </div>
+        </div>
+        <div class='right-dashboard'>
+          <a href='' class='db-right-link active-db-link'><i class='fa fa-home me-2'></i>App</a>
+          <a href='' class='db-right-link'><i class='fa fa-envelope me-2 '></i>Messages</a>
+          <a href='' class='db-right-link'><i class='fa fa-home me-2'></i>Settings</a>
+        </div> 
     </div>
-    <div class='right-dashboard'>
-      <a href='' class='db-right-link active-db-link'><i class='fa fa-home me-2'></i>App</a>
-      <a href='' class='db-right-link'><i class='fa fa-envelope me-2 '></i>Messages</a>
-      <a href='' class='db-right-link'><i class='fa fa-home me-2'></i>Settings</a>
-    </div> 
   </section> 
-  <section class="section2">
-
-  </section>
+  
   <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js'></script>
   <script src='./js/all.min.js'></script>
   <script>
