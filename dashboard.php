@@ -64,8 +64,11 @@ require_once('./includes/header.php');
           <a href='' class='db-right-link active-db-link'><i class='fa fa-home me-2'></i>App</a>
           <a href='' class='db-right-link'><i class='fa fa-envelope me-2 '></i>Messages</a>
           <a href='' class='db-right-link'><i class='fa fa-home me-2'></i>Settings</a>
-        </div> 
+        </div>
     </div>
+    <section class="dashboard-settings">
+  
+    </section>
   </section> 
   
   <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js'></script>

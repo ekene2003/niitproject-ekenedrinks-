@@ -621,11 +621,6 @@ cursor:pointer;
      position: relative;
 }
 .dashboard-sec1{
-
-}
-.db-sec-wrap{
-     display: flex;
-     justify-content: space-between;
      padding: 2rem;
      width: 90%;    
      margin-left: 3.5rem;
@@ -633,8 +628,13 @@ cursor:pointer;
      position: absolute;
      top: 60%;
      z-index: 99;
+     height: 50vh;
      background: white;
      box-shadow: 1px 2px 2px 2px gray;
+}
+.db-sec-wrap{
+     display: flex;
+     justify-content: space-between;
 }
 .dashboard-dp{
      width: 4rem;
@@ -679,4 +679,7 @@ z-index: 99;
 .profile-n{
      font-family: 'Roboto Flex', sans-serif;
      font-weight: 800;
+}
+.dashboard-settings{
+z-index: 999 !important;
 }
