@@ -683,3 +683,17 @@ z-index: 99;
 .dashboard-settings{
 z-index: 999 !important;
 }
+.toogle{
+     padding: .4rem;
+     border: 2px solid black;
+     border-radius: 2rem;
+     width: 3.5rem;
+     height: 2.2rem;
+     cursor: pointer;
+     position: relative;
+}
+.fa-circle{
+     height: 1.3rem;
+     position: absolute;
+     right: 8%;
+}

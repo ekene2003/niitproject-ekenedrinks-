@@ -67,7 +67,13 @@ require_once('./includes/header.php');
         </div>
     </div>
     <section class="dashboard-settings">
-  
+          <h5 class="settings-head">Platform Settings</h5>
+          <p class="setting-small">ACCOUNT</p>
+          <div class="toogle-wrap">
+            <div class="toogle">
+              <i class="fa fa-circle toogle-circle"></i>
+            </div>
+          </div>
     </section>
   </section> 
   
@@ -75,6 +81,8 @@ require_once('./includes/header.php');
   <script src='./js/all.min.js'></script>
   <script>
     let dashboardToggle = document.querySelectorAll(".db-right-link");
+    let toogleCircle = document.querySelector(".toogle-circle");
+    
     dashboardToggle.forEach(toggle => {
       toggle.onclick=(e)=>{
         e.preventDefault(); 
