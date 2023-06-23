@@ -85,8 +85,16 @@ require_once('./includes/header.php');
     let dashboardToggle = document.querySelectorAll(".db-right-link");
     let toogleCircle = document.querySelector(".toogle-circle");
     let circle = document.querySelector(".fa-circle");
-    toogleCircle.onclick=()=>{
-  
+    let toogle = document.querySelector(".toogle");
+    i=0;
+    toogle.onclick=()=>{
+      i++;
+      if (i%2==0) {
+        toogleCircle.style.right="48%";
+      }
+      else{
+        toogleCircle.style.right="8%";
+      }
     }
     dashboardToggle.forEach(toggle => {
       toggle.onclick=(e)=>{
