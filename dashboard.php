@@ -71,7 +71,9 @@ require_once('./includes/header.php');
           <p class="setting-small">ACCOUNT</p>
           <div class="toogle-wrap">
             <div class="toogle">
-              <i class="fa fa-circle toogle-circle"></i>
+              <div class="toogle-circle">
+              <i class="fa fa-circle"></i>
+              </div>
             </div>
           </div>
     </section>
@@ -81,8 +83,11 @@ require_once('./includes/header.php');
   <script src='./js/all.min.js'></script>
   <script>
     let dashboardToggle = document.querySelectorAll(".db-right-link");
-    let toogleCircle = document.querySelector(".fa-circle");
-    
+    let toogleCircle = document.querySelector(".toogle-circle");
+    let circle = document.querySelector(".fa-circle");
+    toogleCircle.onclick=()=>{
+  
+    }
     dashboardToggle.forEach(toggle => {
       toggle.onclick=(e)=>{
         e.preventDefault(); 
@@ -92,7 +97,6 @@ require_once('./includes/header.php');
         toggle.classList.add("active-db-link"); 
       };
     });
-    
   </script>
 
 </body>
