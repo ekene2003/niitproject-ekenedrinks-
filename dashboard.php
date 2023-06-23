@@ -81,7 +81,7 @@ require_once('./includes/header.php');
   <script src='./js/all.min.js'></script>
   <script>
     let dashboardToggle = document.querySelectorAll(".db-right-link");
-    let toogleCircle = document.querySelector(".toogle-circle");
+    let toogleCircle = document.querySelector(".fa-circle");
     
     dashboardToggle.forEach(toggle => {
       toggle.onclick=(e)=>{
@@ -92,7 +92,7 @@ require_once('./includes/header.php');
         toggle.classList.add("active-db-link"); 
       };
     });
-console.log(dashboardToggle);
+    
   </script>
 
 </body>
