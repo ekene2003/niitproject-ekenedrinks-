@@ -57,13 +57,13 @@ require_once('./includes/header.php');
           </div>
           <div class="">
           <h3 class='profile-n'>Ekene Favour</h3>
-          <p class='profile-name-p'>CEO/co-founder</p>
+          <p class='profile-name-p'>CEO/Co-founder</p>
           </div>
         </div>
         <div class='right-dashboard'>
           <a href='' class='db-right-link active-db-link'><i class='fa fa-home me-2'></i>App</a>
           <a href='' class='db-right-link'><i class='fa fa-envelope me-2 '></i>Messages</a>
-          <a href='' class='db-right-link'><i class='fa fa-home me-2'></i>Settings</a>
+          <a href='' class='db-right-link'><i class='fa fa-tools me-2'></i>Settings</a>
         </div>
     </div>
     <section class="dashboard-settings">
