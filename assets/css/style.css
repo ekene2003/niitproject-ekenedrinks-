@@ -654,6 +654,7 @@ display: flex;
 }
 .profile-name-p{
 color: grey;
+font-size: 0.9rem;
 }
 .right-dashboard{
 display: flex;
@@ -679,17 +680,17 @@ z-index: 99;
 }
 .profile-n{
      font-family: 'Roboto Flex', sans-serif;
-     font-weight: 800;
+     font-weight: 700;
 }
 .dashboard-settings{
 z-index: 999 !important;
 }
 .toogle{
-     padding: .18rem;
+     padding: 0 .2rem;
      border: 2px solid black;
      border-radius: 2rem;
      width: 3.1rem;
-     height: 1.8rem;
+     height: 1.7rem;
      cursor: pointer;
      position: relative;
      background: #000;
@@ -699,7 +700,7 @@ z-index: 999 !important;
      color: white;
 }
 .fa-circle{
-     height: 1.3rem;
+     height: 1rem;
 
 }
 .settings-head{
