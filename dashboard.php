@@ -79,7 +79,7 @@ require_once('./includes/header.php');
           <p class="toogle-p">Email me when someone follows me</p>
         </div>
         <div class="wrap1">
-          <div class="toogle inverse-tog">
+          <div class="inverse-tog">
             <div class="inverse-toogle-circle">
               <i class="fa fa-circle"></i>
             </div>
@@ -109,8 +109,8 @@ require_once('./includes/header.php');
 </p>
         </div>
         <div class="wrap1">
-          <div class="toogle inverse-tog">
-            <div class=" inverse-toogle-circle">
+          <div class="inverse-tog">
+            <div class="inverse-toogle-circle">
               <i class="fa fa-circle"></i>
             </div>
           </div>
@@ -118,7 +118,7 @@ require_once('./includes/header.php');
           </p>
         </div>
         <div class="wrap1">
-          <div class="toogle inverse-tog">
+          <div class="inverse-tog">
             <div class="inverse-toogle-circle">
               <i class="fa fa-circle"></i>
             </div>
@@ -139,21 +139,6 @@ require_once('./includes/header.php');
     let toogle = document.querySelectorAll(".toogle");
     let inverseToogle = document.querySelectorAll(".inverse-tog");
     i = 0;
-    inverseToogle.forEach(inversetlg => {
-      inversetlg.onclick = () => {
-        i++;
-        let currentToogle = tlg.closest(".wrap1").querySelector(".inverse-toogle-circle");
-        if (i % 2 == 0) {
-          currentToogle.style.right = "3%";
-          tlg.style.background = "lightgrey";
-          tlg.style.border = "1px solid lightgrey";
-        } else {
-          currentToogle.style.right = "57%";
-          tlg.style.background = "#434148";
-          tlg.style.border = "1px solid #434148";
-        }
-      }
-    });
     toogle.forEach(tlg => {
       tlg.onclick = () => {
         i++;
@@ -166,6 +151,21 @@ require_once('./includes/header.php');
           currentToogle.style.right = "8%";
           tlg.style.background = "lightgrey";
           tlg.style.border = "1px solid lightgrey";
+        }
+      }
+    });
+    inverseToogle.forEach(tlg => {
+      tlg.onclick = () => {
+        i++;
+        let currentToogle = tlg.closest(".wrap1").querySelector(".inverse-toogle-circle");
+        if (i % 2 == 0) {
+          currentToogle.style.right = "8%";
+          tlg.style.background = "lightgrey";
+          tlg.style.border = "1px solid lightgrey";
+        } else {
+          currentToogle.style.right = "57%";
+          tlg.style.background = "#434148";
+          tlg.style.border = "1px solid #434148";
         }
       }
     });
