@@ -78,6 +78,54 @@ require_once('./includes/header.php');
           </div>
           <p class="toogle-p">Email me when someone follows me</p>
         </div>
+        <div class="wrap1">
+          <div class="toogle inverse-tog">
+            <div class="inverse-toogle-circle">
+              <i class="fa fa-circle"></i>
+            </div>
+          </div>
+          <p class="toogle-p">Email me when someone answers on my post
+          </p>
+        </div>
+        <div class="wrap1">
+          <div class="toogle">
+            <div class="toogle-circle">
+              <i class="fa fa-circle"></i>
+            </div>
+          </div>
+          <p class="toogle-p">Email me when someone mentions me
+          </p>
+        </div>
+      </div>
+      <p class="setting-small">Application</p>
+      <div class="toogle-wrap">
+        <div class="wrap1">
+          <div class="toogle">
+            <div class="toogle-circle">
+              <i class="fa fa-circle"></i>
+            </div>
+          </div>
+          <p class="toogle-p">New launches and projects
+</p>
+        </div>
+        <div class="wrap1">
+          <div class="toogle inverse-tog">
+            <div class=" inverse-toogle-circle">
+              <i class="fa fa-circle"></i>
+            </div>
+          </div>
+          <p class="toogle-p">Monthly product updates
+          </p>
+        </div>
+        <div class="wrap1">
+          <div class="toogle inverse-tog">
+            <div class="inverse-toogle-circle">
+              <i class="fa fa-circle"></i>
+            </div>
+          </div>
+          <p class="toogle-p">Subscribe to newsletter
+          </p>
+        </div>
       </div>
     </section>
   </section>
@@ -86,18 +134,41 @@ require_once('./includes/header.php');
   <script src='./js/all.min.js'></script>
   <script>
     let dashboardToggle = document.querySelectorAll(".db-right-link");
-    let toogleCircle = document.querySelector(".toogle-circle");
+    let toogleCircle = document.querySelectorAll(".toogle-circle");
     let circle = document.querySelector(".fa-circle");
-    let toogle = document.querySelector(".toogle");
+    let toogle = document.querySelectorAll(".toogle");
+    let inverseToogle = document.querySelectorAll(".inverse-tog");
     i = 0;
-    toogle.onclick = () => {
-      i++;
-      if (i % 2 == 0) {
-        toogleCircle.style.right = "57%";
-      } else {
-        toogleCircle.style.right = "8%";
+    inverseToogle.forEach(inversetlg => {
+      inversetlg.onclick = () => {
+        i++;
+        let currentToogle = tlg.closest(".wrap1").querySelector(".inverse-toogle-circle");
+        if (i % 2 == 0) {
+          currentToogle.style.right = "3%";
+          tlg.style.background = "lightgrey";
+          tlg.style.border = "1px solid lightgrey";
+        } else {
+          currentToogle.style.right = "57%";
+          tlg.style.background = "#434148";
+          tlg.style.border = "1px solid #434148";
+        }
       }
-    }
+    });
+    toogle.forEach(tlg => {
+      tlg.onclick = () => {
+        i++;
+        let currentToogle = tlg.closest(".wrap1").querySelector(".toogle-circle");
+        if (i % 2 == 0) {
+          currentToogle.style.right = "57%";
+          tlg.style.background = "#434148";
+          tlg.style.border = "1px solid #434148";
+        } else {
+          currentToogle.style.right = "8%";
+          tlg.style.background = "lightgrey";
+          tlg.style.border = "1px solid lightgrey";
+        }
+      }
+    });
     dashboardToggle.forEach(toggle => {
       toggle.onclick = (e) => {
         e.preventDefault();

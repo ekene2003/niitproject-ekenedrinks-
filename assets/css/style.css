@@ -628,7 +628,7 @@ cursor:pointer;
      position: absolute;
      top: 60%;
      z-index: 99;
-     height: 50vh;
+     height: 90vh;
      background: white;
      box-shadow: 1px 2px 2px 2px gray;
 }
@@ -687,17 +687,32 @@ z-index: 999 !important;
 }
 .toogle{
      padding: 0 .2rem;
-     border: 2px solid black;
+     border: 2px solid #434148;
      border-radius: 2rem;
      width: 3.1rem;
      height: 1.7rem;
      cursor: pointer;
      position: relative;
-     background: #000;
+     background: #434148;
+}
+.inverse-tog{
+     background: lightgray;
+     border: 2px solid lightgray;
+     padding: 0 .2rem;
+     border-radius: 2rem;
+     width: 3.1rem;
+     height: 1.7rem;
+     cursor: pointer;
+     position: relative;
 }
 .toogle-circle{
      position: absolute;
      color: white;
+}
+.inverse-toogle-circle{
+     position: absolute;
+     color: white;
+     right: 3%;
 }
 .fa-circle{
      height: 1rem;
@@ -719,4 +734,8 @@ z-index: 999 !important;
 }
 .toogle-circle{
 
+}
+.wrap1{
+     display: flex;
+     gap: 1rem;
 }
