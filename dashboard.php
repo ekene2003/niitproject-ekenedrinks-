@@ -132,7 +132,7 @@ require_once('./includes/header.php');
       </h6>
       <div class="info-split">
       <p class="info-p">Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality).
-      <i class="fa fa-user"></i>
+      <i class="fa fa-user info-user"></i>
       </div>
                
 </p>
