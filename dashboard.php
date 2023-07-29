@@ -105,8 +105,7 @@ require_once('./includes/header.php');
               <i class="fa fa-circle"></i>
             </div>
           </div>
-          <p class="toogle-p">New launches and projects
-</p>
+          <p class="toogle-p">New launches and projects</p>
         </div>
         <div class="wrap1">
           <div class="inverse-tog">
@@ -127,6 +126,17 @@ require_once('./includes/header.php');
           </p>
         </div>
       </div>
+    </section>
+    <section class="profile-info">
+    <h6 class="info-head mt-3">Profile Information
+      </h6>
+      <div class="info-split">
+      <p class="info-p">Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality).
+      <i class="fa fa-user"></i>
+      </div>
+               
+</p>
+
     </section>
   </section>
 
@@ -152,6 +162,7 @@ require_once('./includes/header.php');
           tlg.style.background = "lightgrey";
           tlg.style.border = "1px solid lightgrey";
         }
+
       }
     });
     inverseToogle.forEach(tlg => {

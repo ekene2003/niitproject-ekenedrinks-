@@ -628,7 +628,7 @@ cursor:pointer;
      position: absolute;
      top: 60%;
      z-index: 99;
-     height: 90vh;
+     height: fit-content;
      background: white;
      box-shadow: 1px 2px 2px 2px gray;
 }
@@ -738,4 +738,8 @@ z-index: 999 !important;
 .wrap1{
      display: flex;
      gap: 1rem;
+}
+.info-split{
+     display: flex;
+     justify-content:space-between;
 }
