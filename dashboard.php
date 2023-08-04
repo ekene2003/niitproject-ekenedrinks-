@@ -153,17 +153,37 @@ require_once('./includes/header.php');
         <p class="name1">Location:</p>
         <p class="name2"> USA</p>
       </div>
-      <div class="fullname">
-        <p class="name1">Social:</p>
+      <div class="social-detail">
         <div class="social-wrap">
-           <div class="social-wrap"><a href="" class="social"></a><i class="fab fa-facebook"></i></div>
-           <div class="social-wrap"><a href="" class="social"></a><i class="fab fa-twitter"></i></div>
-           <div class="social-wrap"><a href="" class="social"></a><i class="fab fa-instagram"></i></div>
+          <div class="social-p"> 
+            <p class="name1">Social:</p>
+          </div>
+          <div class="social-a-wrap">
+           <a href="" class="social-a"></a><i class="fab fa-facebook"></i>
+           <a href="" class="social-a"></a><i class="fab fa-twitter"></i>
+           <a href="" class="social-a"></a><i class="fab fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="coversations">
+      <h5 class="conversations-head">Conversations</h5>
+      <div class="convo-wrap">
+        <div class="left">
+          <div class="convo-img">
+           <img src="./assets/images/pexels-alleksana-4113666.jpg" alt="">
+          </div>
+          <div class="convo-details">
+            <h3 class="convo-head">sophie.b</h3>
+            <p class="convo-p">Hi! I need more information.</p>
+          </div>
+        </div>
+        <div class="right">
+          <h3 class="reply-btn">REPLY</h3>
         </div>
       </div>
     </section>
   </section>
-
   <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js'></script>
   <script src='./js/all.min.js'></script>
   <script>

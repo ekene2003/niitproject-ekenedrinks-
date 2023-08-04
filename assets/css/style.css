@@ -761,14 +761,49 @@ z-index: 999 !important;
 }
 .fullname{
      display: flex;
-     gap: 0.5rem;
+     gap: 0.5rem;  
 
 }
 .name1{
      font-size: 1rem;
      font-weight: 500;
 }
+.social-detail{
+}
 .social-wrap{
 display: flex !important;
-gap: 1rem;
+gap: 0.4rem;
+}
+.social-a{
+ margin: 0 .2rem;
+}
+.coversations{
+     
+}
+.conversations-head{
+     
+}
+.convo-wrap{
+     
+}
+.left{
+     
+}
+.convo-img{
+     
+}
+.convo-details{
+     
+}
+.convo-head{
+     
+}
+.convo-p{
+     
+}
+.right{
+     
+}
+.reply-btn{
+     
 }
