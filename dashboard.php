@@ -128,14 +128,33 @@ require_once('./includes/header.php');
       </div>
     </section>
     <section class="profile-info">
+      <div class="info-split">
       <h6 class="info-head mt-3">Profile Information
       </h6>
-      <div class="info-split">
+      <i class="fa fa-user info-user"></i>
+      </div>
+      <div class="">
         <p class="info-p">Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality).
-          <i class="fa fa-user info-user"></i>
       </div>
       </p>
-
+    </section>
+    <section class="details">
+      <div class="fullname">
+        <h6 class="name1">Full Name:</h6>
+        <p class="name2"> Lorem</p>
+      </div>
+      <div class="fullname">
+        <h6 class="name1">Mobile:</h6>
+        <p class="name2"> (44) 123 1234 123</p>
+      </div>
+      <div class="fullname">
+        <h6 class="name1">Email:</h6>
+        <p class="name2"> alecthompson@mail.com</p>
+      </div>
+      <div class="fullname">
+        <h6 class="name1">Location:</h6>
+        <p class="name2"> USA</p>
+      </div>
     </section>
   </section>
 
