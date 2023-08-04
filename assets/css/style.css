@@ -513,12 +513,18 @@ input{
      font-family: 'Play', sans-serif;
      font-size: 1.2rem;
 }
+.dashboard-body{
+     background: #f0f2f3;
+
+
+}
 .dashboard-header{
      display: flex;
      align-items: center;
      justify-content: space-between     ;
      padding: 1rem;
     background: #f0f2f3;
+
 }
 .dashboard-head-p{
      font-family: 'Roboto Flex', sans-serif;
@@ -628,7 +634,7 @@ cursor:pointer;
      position: absolute;
      top: 60%;
      z-index: 99;
-     height: fit-content;
+     height:fit-content;
      background: white;
      box-shadow: 1px 2px 2px 2px gray;
 }
@@ -647,9 +653,10 @@ cursor:pointer;
 display: flex;
 }
 .dashboard-dp{
-
+box-shadow: 2px 2px 6px 1px gray;
 }
-.profile{
+.profile-n{
+     color: #32476a;
 
 }
 .profile-name-p{
@@ -666,11 +673,12 @@ height: 4rem;
 padding: 1rem;
 position: relative;
 border-radius: 1.2rem;
+
 }
 .db-right-link{
-     padding: .4rem;
+padding: .4rem;
 border-radius: 12px;
-color: gray;
+color: #32476a;
 z-index: 99;
 }
 .active-db-link{
@@ -719,7 +727,8 @@ z-index: 999 !important;
 
 }
 .settings-head{
-
+     color: #32476a;
+     margin-top: 2rem;
 }
 .setting-small{
      color: grey;
@@ -732,12 +741,18 @@ z-index: 999 !important;
 .toogle{
 
 }
+.toogle-p{
+     color: grey;
+}
 .toogle-circle{
 
 }
 .wrap1{
      display: flex;
      gap: 1rem;
+}
+.info-head{
+     color: #32476a;
 }
 .info-p{
      text-align:left;
@@ -767,43 +782,63 @@ z-index: 999 !important;
 .name1{
      font-size: 1rem;
      font-weight: 500;
+     color: #32476a;
+}
+.name2{
+     color: grey;
 }
 .social-detail{
 }
 .social-wrap{
 display: flex !important;
 gap: 0.4rem;
+color: grey;
+
 }
 .social-a{
  margin: 0 .2rem;
 }
 .coversations{
-     
+
 }
 .conversations-head{
-     
+margin-top: 3rem;
+margin-bottom: 1.3rem;
+color: #32476a;
+
 }
 .convo-wrap{
-     
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 1.5rem;
 }
 .left{
-     
+display: flex;
+gap: 1rem;
 }
 .convo-img{
-     
+width: 3rem;
+height: 3rem;
+object-fit: cover;
+border-radius: 1rem;
 }
 .convo-details{
-     
+display: flex;
+flex-direction: column;
 }
 .convo-head{
-     
+     color: #32476a;
+     font-size: 1rem;
 }
 .convo-p{
-     
+color: grey;
+font-size: .9rem;
 }
 .right{
-     
+
 }
 .reply-btn{
-     
+color: red;
+font-size: .9rem;
 }

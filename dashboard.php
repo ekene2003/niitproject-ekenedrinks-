@@ -3,7 +3,7 @@ require_once('./includes/header.php');
 
 ?>
 
-<body>
+<body class="dashboard-body">
   <header class='dashboard-header p-3'>
     <div class='dashboard-head-p'>
       <p class='dashboard-p'> <span style='color:darkgrey;'>Pages</span>/Profile</p>
@@ -170,16 +170,73 @@ require_once('./includes/header.php');
       <h5 class="conversations-head">Conversations</h5>
       <div class="convo-wrap">
         <div class="left">
-          <div class="convo-img">
-           <img src="./assets/images/pexels-alleksana-4113666.jpg" alt="">
+          <div class="convo-img-wrap">
+           <img class="convo-img" src="./assets/images/fcdb95c723bb3c656625ac71476f294b.jpg" alt="">
           </div>
           <div class="convo-details">
-            <h3 class="convo-head">sophie.b</h3>
+            <h5 class="convo-head">sophie.B</h5>
             <p class="convo-p">Hi! I need more information.</p>
           </div>
         </div>
         <div class="right">
-          <h3 class="reply-btn">REPLY</h3>
+          <h6 class="reply-btn">REPLY</h6>
+        </div>
+      </div>
+      <div class="convo-wrap">
+        <div class="left">
+          <div class="convo-img-wrap">
+           <img class="convo-img" src="./assets/images/c34f96faccfdb4d91375c0c220fffd89.jpg" alt="">
+          </div>
+          <div class="convo-details">
+            <h5 class="convo-head">
+Anne Marie</h5>
+            <p class="convo-p">Awesome work, can you.</p>
+          </div>
+        </div>
+        <div class="right">
+          <h6 class="reply-btn">REPLY</h6>
+        </div>
+      </div>
+      <div class="convo-wrap">
+        <div class="left">
+          <div class="convo-img-wrap">
+           <img class="convo-img" src="./assets/images/20220419_191839.jpg" alt="">
+          </div>
+          <div class="convo-details">
+            <h5 class="convo-head">Ivanna</h5>
+            <p class="convo-p">About files I can.</p>
+          </div>
+        </div>
+        <div class="right">
+          <h6 class="reply-btn">REPLY</h6>
+        </div>
+      </div>
+      <div class="convo-wrap">
+        <div class="left">
+          <div class="convo-img-wrap">
+           <img class="convo-img" src="./assets/images/IMG_9630.JPEG" alt="">
+          </div>
+          <div class="convo-details">
+            <h5 class="convo-head">Peterson</h5>
+            <p class="convo-p">Have a great afternoon</p>
+          </div>
+        </div>
+        <div class="right">
+          <h6 class="reply-btn">REPLY</h6>
+        </div>
+      </div>
+      <div class="convo-wrap">
+        <div class="left">
+          <div class="convo-img-wrap">
+           <img class="convo-img" src="./assets/images/20220819_214524.jpg" alt="">
+          </div>
+          <div class="convo-details">
+            <h5 class="convo-head">Nick Daniel</h5>
+            <p class="convo-p">Hi! I need more information.</p>
+          </div>
+        </div>
+        <div class="right">
+          <h6 class="reply-btn">REPLY</h6>
         </div>
       </div>
     </section>
